@@ -16,10 +16,13 @@ for i in range(1,11):
 for i in range(1,6):
     df["O"+str(i)]=df["O"+str(i)]*df["PROC"]
 dfO = df.sort_values(by="SUM",ascending=1).reset_index(drop=True)
+
 print(dfO)
-df1 = dfO.iloc[0,1].tolist()
-# df1 = dfO.loc[0]
+
+df1 = dfO.iloc[:,1:6].T
 print(df1)
+
+
 
 
 
