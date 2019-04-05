@@ -29,12 +29,32 @@ jobListe = dfO.iloc[:,0]
 for i in range(int(df1.shape[1])) :
     dfDeneme = pd.DataFrame(df1.iloc[:,i])
     dfDeneme = dfDeneme.sort_values(by=list(dfDeneme)[0])
+    # print(dfDeneme[list(dfDeneme)[0]] != 0)
     siralama[list(dfDeneme)[0]] = dfDeneme.index.tolist()
 print(siralama)
 
 
 for item in jobListe:
-    print(siralama[item])
+    print(item,siralama[item])
+
+for i in range(len(jobListe),0,-1):
+    if not i - 1 == 0:
+        listeA = siralama[jobListe[i-1]]
+        listeB = siralama[jobListe[i-2]]
+        liste = [i for i,j in zip(listeA,listeB) if i == j ]
+        if len(liste)>0:
+            print(liste)        
+            for c in reversed(liste):
+                listeB.remove(c)
+                listeB.insert(0,c)   
+            siralama[jobListe[i-2]] = listeB
+
+for item in jobListe:
+    print(item,siralama[item])
+        # if list(set(siralama[jobListe[i-1]]) & set(siralama[jobListe[i-2]]))[0] > 0:
+        #     print(siralama[jobListe[i-1]])
+    
+
 
 # print(df1.iloc[:,0])
 # dfDeneme = pd.DataFrame(df1.iloc[:,0])
