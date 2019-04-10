@@ -49,7 +49,6 @@ for i in range(int(df1.shape[1])) :
     # for i in liste
     # print(type(dfDeneme[list(dfDeneme)[0]] != 0))
     # siralama[list(dfDeneme)[0]] = liste
-print(siralama)
 
 
 for item in jobListe:
@@ -59,7 +58,14 @@ for i in range(len(jobListe),0,-1):
     if not i - 1 == 0:
         listeA = siralama[jobListe[i-1]]
         listeB = siralama[jobListe[i-2]]
-        liste = [i for i,j in zip(listeA,listeB) if i == j ]
+        liste = []
+        for a in listeA:
+            for b in listeB:
+                if a==b:
+                    liste.append(a)
+        
+        
+        # liste = [i for i,j in zip(listeA,listeB) if i == j ]
         if len(liste)>0:
             print(liste)        
             for c in reversed(liste):
