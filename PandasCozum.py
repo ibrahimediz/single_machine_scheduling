@@ -2,7 +2,6 @@ import pandas as pd
 import numpy as np
 sutun = ["Job","O1","O2","O3","O4","O5","PROC","SETUP"]
 data =  pd.read_csv(r"E:\Projelerim\single_machine_scheduling\DENEME CSV SETLER\DENEME CSV SETLER\I=5, J=10\Experiment35.csv",delimiter=";")
-# print(data)
 sutun.append("SUM")
 df = pd.DataFrame(columns=sutun)
 df.Job = data.Job
@@ -12,19 +11,19 @@ df.iloc[:,1:6] = data.iloc[:,2:7]
 for i in range(1,11):
     dr =  (data.iloc[i-1,2:7].sum()*data.iloc[i-1,7])+data.iloc[i-1,8]
     df.SUM.iloc[[i-1]] = dr
-# print(df)
 for i in range(1,6):
     df["O"+str(i)]=df["O"+str(i)]*df["PROC"]
 dfO = df.sort_values(by="SUM",ascending=1).reset_index(drop=True)
 
-# print(dfO)
 
-
+print(dfO)
 
 
 df1 = dfO.iloc[:,1:6].T
-# print(df1)
 df1.columns=dfO.iloc[:,0]
+df2 = dfO.iloc[:,1:8].T
+df2.columns=dfO.iloc[:,0]
+print(df2)
 siralama = {}
 jobListe = dfO.iloc[:,0]
 for i in range(int(df1.shape[1])) :
@@ -35,12 +34,9 @@ for i in range(int(df1.shape[1])) :
     for i in dfDeneme[list(dfDeneme)[0]]:
         liste1 = list(dfDeneme[list(dfDeneme)[0]])
         liste2 = list(dfDeneme[list(dfDeneme)[0]].index)
-        print("1",liste1)
-        print("2",liste2)
         for item in liste1:
             if item == 0:
                 liste2.pop(liste1.index(item))
-        print("son",liste2)
     siralama[list(dfDeneme)[0]] = liste2    
     
 
@@ -51,8 +47,8 @@ for i in range(int(df1.shape[1])) :
     # siralama[list(dfDeneme)[0]] = liste
 
 
-for item in jobListe:
-    print(item,siralama[item])
+# for item in jobListe:
+#     print(item,siralama[item])
 
 for i in range(len(jobListe),0,-1):
     if not i - 1 == 0:
@@ -72,9 +68,19 @@ for i in range(len(jobListe),0,-1):
                 listeB.remove(c)
                 listeB.insert(0,c)   
             siralama[jobListe[i-2]] = listeB
-
+toplam = 0
 for item in jobListe:
     print(item,siralama[item])
+    for i in siralama[item]:
+        print(i,item,df2.loc[i,item])
+        toplam += df2.loc[i,item]
+    print("Setup",df2.loc["SETUP",item])
+    toplam += df2.loc["SETUP",item]
+    print("Toplam",toplam)
+    
+
+
+
 
 
 
