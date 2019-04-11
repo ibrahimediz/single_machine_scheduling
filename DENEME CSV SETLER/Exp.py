@@ -5,22 +5,41 @@
 
 # print(dosya)
 # input()
-
 import pandas as pd
 import numpy as np
-sutun = ["Job","O1","O2","O3","O4","O5","PROC","SETUP"]
-data =  pd.read_csv(r"E:\Projelerim\single_machine_scheduling\DENEME CSV SETLER\DENEME CSV SETLER\I=5, J=10\Experiment35.csv",delimiter=";")
-sutun.append("SUM")
-df = pd.DataFrame(columns=sutun)
-df.Job = data.Job
-df.SETUP = data.SETUP
-df.PROC=data.PROC
-df.iloc[:,1:6] = data.iloc[:,2:7]
-for i in range(1,11):
-    dr =  (data.iloc[i-1,2:7].sum()*data.iloc[i-1,7])+data.iloc[i-1,8]
-    df.SUM.iloc[[i-1]] = dr
-for i in range(1,6):
-    df["O"+str(i)]=df["O"+str(i)]*df["PROC"]
+class ExpSum():
+    def __init__(self,yol):
+        self.sutun = ["Job","O1","O2","O3","O4","O5","PROC","SETUP"]
+        self.data = pd.read_csv(yol)
+        self.Hazirla()
+
+    def Hazirla(self):
+        self.sutun.append("SUM")
+        df = pd.DataFrame(columns=self.sutun)
+        df.Job = self.data.Job
+        df.SETUP = self.data.SETUP
+        df.PROC= self.data.PROC
+        df.iloc[:,1:6] = self.data.iloc[:,2:7]
+        for i in range(1,11):
+            dr =  (self.data.iloc[i-1,2:7].sum()*self.data.iloc[i-1,7])+self.data.iloc[i-1,8]
+            df.SUM.iloc[[i-1]] = dr
+        for i in range(1,6):
+            df["O"+str(i)]=df["O"+str(i)]*df["PROC"]
+        return df
+        
+# sutun = ["Job","O1","O2","O3","O4","O5","PROC","SETUP"]
+# data =  pd.read_csv(r"E:\Projelerim\single_machine_scheduling\DENEME CSV SETLER\DENEME CSV SETLER\I=5, J=10\Experiment35.csv",delimiter=";")
+# sutun.append("SUM")
+# df = pd.DataFrame(columns=sutun)
+# df.Job = data.Job
+# df.SETUP = data.SETUP
+# df.PROC=data.PROC
+# df.iloc[:,1:6] = data.iloc[:,2:7]
+# for i in range(1,11):
+#     dr =  (data.iloc[i-1,2:7].sum()*data.iloc[i-1,7])+data.iloc[i-1,8]
+#     df.SUM.iloc[[i-1]] = dr
+# for i in range(1,6):
+#     df["O"+str(i)]=df["O"+str(i)]*df["PROC"]
 dfO = df.sort_values(by="SUM",ascending=1).reset_index(drop=True)
 
 
@@ -67,57 +86,28 @@ for i in range(len(jobListe),0,-1):
             for b in listeB:
                 if a==b:
                     liste.append(a)
+        
+        
+        # liste = [i for i,j in zip(listeA,listeB) if i == j ]
         if len(liste)>0:
             print(liste)        
             for c in reversed(liste):
                 listeB.remove(c)
                 listeB.insert(0,c)   
             siralama[jobListe[i-2]] = listeB
-
-
-# for item in jobListe:
-#     print(item,siralama[item])
-
-
-
 toplam = 0
-orderToplamListesi = {}
-for order in range(1,6):
-    orderToplamListesi.update({"O"+str(order):0})
-
-def ilerideVarmi(order,Job):
-    global jobListe
-    global siralama
-    liste = list(jobListe)
-    if liste.index(Job)+1  == len(liste):
-        return False
-    else:
-        sayi = liste.index(Job)
-        sinama  = False
-        for i in range(sayi,len(liste)):
-            for item in siralama[liste[i]] :
-                if order in item:
-                    sinama = True
-        return sinama
-                    
-# print(list(jobListe))
 for item in jobListe:
-    toplam += df2.loc["SETUP",item]
+    print(item,siralama[item])
     for i in siralama[item]:
-        print(item,i,ilerideVarmi(i,item))
+        print(i,item,df2.loc[i,item])
         toplam += df2.loc[i,item]
-        if ilerideVarmi(i,item):            
-            orderToplamListesi[i] = toplam
+    print("Setup",df2.loc["SETUP",item])
+    toplam += df2.loc["SETUP",item]
     print("Toplam",toplam)
-print(orderToplamListesi)
-sayi = 0
-for i in orderToplamListesi.values():
-    sayi += i
 
-print("Toplam",sayi)
+    fileName = ""
 
-
-                    
+    
 
 
 
