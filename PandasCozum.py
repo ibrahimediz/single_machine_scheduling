@@ -9,6 +9,7 @@
 import pandas as pd
 import numpy as np
 import os
+import time
 def DosyaOlustur(adres):
     import os
     try:
@@ -24,7 +25,10 @@ def DosyaOlustur(adres):
 
 
 
-def OkuBakalım(is_adi,Folderadres,txt_adres,csv_adres,Job,Order):
+def OkuBakalım(is_adi,Folderadres,txt_adres,csv_adres,Job,Order,TopSure,DosyaSure):
+    start = time.time()
+    def gecenSure(start):
+        return time.time()-start
     sutun = ["Job"] 
     for i in range (1,Order+1):
         sutun.append("O"+str(i))
@@ -32,8 +36,9 @@ def OkuBakalım(is_adi,Folderadres,txt_adres,csv_adres,Job,Order):
     adres = Folderadres+"\\"+txt_adres
     data =  pd.read_csv(Folderadres+"\\"+csv_adres,delimiter=";")
     DosyaOlustur(Folderadres+"\\"+txt_adres)
-    print("İlk Okuma\n",is_adi,file = open(adres,"a"))
-    print(data,"\n",is_adi*2,file = open(adres,"a"))
+    
+    print("İlk Okuma\n",is_adi,gecenSure(start),file = open(adres,"a"))
+    print(data,"\n",is_adi,file = open(adres,"a"))
     
     sutun.append("SUM")
     df = pd.DataFrame(columns=sutun)
@@ -154,20 +159,23 @@ def OkuBakalım(is_adi,Folderadres,txt_adres,csv_adres,Job,Order):
 
 
     print("Toplam Eklendi\n",is_adi,file = open(adres,"a"))
-    print(sayi,"\n"*2,file = open(adres,"a"))
-
-    print("Toplam",sayi)
+    print("Toplam",sayi,"Geçen Süre :",gecenSure(start),"sn","\n"*2,file = open(adres,"a"))
+    print("Dosyada Geçen Süre :",gecenSure(DosyaSure),"sn","\n"*2,file = open(adres,"a"))
+    print("Toplamda Geçen Süre :",gecenSure(TopSure),"sn","\n"*2,file = open(adres,"a"))    
+    print("Toplam",sayi,"Geçen Süre :",gecenSure(start),"sn")
         
 table_list = []
-new_table_list = []
-for filename in os.listdir(r"E:\Projelerim\single_machine_scheduling\DENEME CSV SETLER\DENEME CSV SETLER\I=20, J=15"):
-    if filename.endswith('.csv'):
-        # table_list.append(pd.read_csv(filename,sep="|"))
-        new_table_list.append(filename)
-        # print(table_list)
-        # print(new_table_list)
-for item in new_table_list:
-    OkuBakalım(item.split(".")[0],r"E:\Projelerim\single_machine_scheduling\DENEME CSV SETLER\DENEME CSV SETLER\I=20, J=15",r"\I20_J15.txt",item,Job=15,Order=20)
+
+ToplamSure = time.time()
+for ord in range(5,25,5):
+    for job in range(5,25,5):
+        new_table_list = []
+        for filename in os.listdir(r"E:\Projelerim\single_machine_scheduling\DENEME CSV SETLER\DENEME CSV SETLER\I={}, J={}".format(ord,job)):
+            if filename.endswith('.csv'):
+                new_table_list.append(filename)
+        for item in new_table_list:
+            DosyaSure = time.time()
+            OkuBakalım(item.split(".")[0],r"E:\Projelerim\single_machine_scheduling\DENEME CSV SETLER\DENEME CSV SETLER\I={}, J={}".format(ord,job),r"\I{}_J{}.txt".format(ord,job),item,Job=job,Order=ord,TopSure=ToplamSure,DosyaSure=DosyaSure)
 
 # toplam = 0
 # orderToplamListesi = {}

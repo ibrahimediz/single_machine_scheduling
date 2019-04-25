@@ -1,21 +1,12 @@
 Ýlk Okuma
- Experiment1
+ Experiment1 0.010999917984008789
    Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
 0    1  J1   2   0   0   0   0     4      2
 1    1  J2   0   1   0   0   0     3    121
 2    1  J3   4   0   0   5   0     2      7
 3    1  J4   0   4   7   0   0     1     94
 4    1  J5   0   0   8   0   4     1     46 
- Experiment1Experiment1
-Ýlk Okuma
  Experiment1
-   Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
-0    1  J1   2   0   0   0   0     4      2
-1    1  J2   0   1   0   0   0     3    121
-2    1  J3   4   0   0   5   0     2      7
-3    1  J4   0   4   7   0   0     1     94
-4    1  J5   0   0   8   0   4     1     46 
- Experiment1Experiment1
 Sum Eklendi
  Experiment1
   Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
@@ -60,28 +51,34 @@ Name: Job, dtype: object
 
 Sýralama Eklendi
  Experiment1
-{'J4': ['O3', 'O2'], 'J3': ['O1', 'O4'], 'J5': ['O5', 'O3'], 'J1': ['O1'], 'J2': ['O2']} 
+{'J4': ['O3', 'O2'], 'J1': ['O1'], 'J2': ['O2'], 'J5': ['O5', 'O3'], 'J3': ['O1', 'O4']} 
 
 
 orderToplamListesi Eklendi
  Experiment1
-{'O4': 35, 'O5': 85, 'O1': 25, 'O2': 322, 'O3': 194} 
+{'O1': 25, 'O4': 35, 'O2': 322, 'O3': 194, 'O5': 85} 
 
 
 Toplam Eklendi
  Experiment1
-661 
+Toplam 661 Geçen Süre : 0.4220004081726074 sn 
+
+
+Dosyada Geçen Süre : 0.4250009059906006 sn 
+
+
+Toplamda Geçen Süre : 0.42902421951293945 sn 
 
 
 Ýlk Okuma
- Experiment10
+ Experiment10 0.012018442153930664
    Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
 0   10  J1   9   3  10   8   2     1      3
 1   10  J2   5   6   5   2   6     6     33
 2   10  J3   0   5   9   7   0     6     39
 3   10  J4   0   0   0   0   6     6      3
 4   10  J5   0   0   1   5   4     1     23 
- Experiment10Experiment10
+ Experiment10
 Sum Eklendi
  Experiment10
   Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
@@ -126,28 +123,34 @@ Name: Job, dtype: object
 
 Sýralama Eklendi
  Experiment10
-{'J4': ['O5'], 'J3': ['O2', 'O4', 'O3'], 'J5': ['O3', 'O5', 'O4'], 'J1': ['O5', 'O4', 'O3', 'O2', 'O1'], 'J2': ['O4', 'O3', 'O2', 'O1', 'O5']} 
+{'J4': ['O5'], 'J1': ['O5', 'O4', 'O3', 'O2', 'O1'], 'J2': ['O4', 'O3', 'O2', 'O1', 'O5'], 'J3': ['O2', 'O4', 'O3'], 'J5': ['O3', 'O5', 'O4']} 
 
 
 orderToplamListesi Eklendi
  Experiment10
-{'O4': 317, 'O5': 449, 'O1': 413, 'O2': 383, 'O3': 347} 
+{'O1': 413, 'O4': 317, 'O2': 383, 'O3': 347, 'O5': 449} 
 
 
 Toplam Eklendi
  Experiment10
-1909 
+Toplam 1909 Geçen Süre : 0.4159963130950928 sn 
+
+
+Dosyada Geçen Süre : 0.42002034187316895 sn 
+
+
+Toplamda Geçen Süre : 0.8600075244903564 sn 
 
 
 Ýlk Okuma
- Experiment11
+ Experiment11 0.01900196075439453
    Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
 0   11  J1   8   4  10   1   4    10      8
 1    1  J2   8   8  10  10   8     1     29
 2   11  J3   0   0   8   5  10     7     32
 3   11  J4  10   1   0   0   0     8     42
 4   11  J5   0   1  10   4   6     9      6 
- Experiment11Experiment11
+ Experiment11
 Sum Eklendi
  Experiment11
   Job  O1  O2   O3  O4  O5  PROC  SETUP  SUM
@@ -192,28 +195,34 @@ Name: Job, dtype: object
 
 Sýralama Eklendi
  Experiment11
-{'J4': ['O2', 'O1'], 'J3': ['O4', 'O3', 'O5'], 'J5': ['O4', 'O5', 'O3', 'O2'], 'J2': ['O1', 'O2', 'O5', 'O3', 'O4'], 'J1': ['O4', 'O2', 'O5', 'O3', 'O1']} 
+{'J4': ['O2', 'O1'], 'J1': ['O4', 'O2', 'O5', 'O3', 'O1'], 'J2': ['O1', 'O2', 'O5', 'O3', 'O4'], 'J5': ['O4', 'O5', 'O3', 'O2'], 'J3': ['O4', 'O3', 'O5']} 
 
 
 orderToplamListesi Eklendi
  Experiment11
-{'O4': 609, 'O5': 689, 'O1': 869, 'O2': 649, 'O3': 789} 
+{'O1': 869, 'O4': 609, 'O2': 649, 'O3': 789, 'O5': 689} 
 
 
 Toplam Eklendi
  Experiment11
-3605 
+Toplam 3605 Geçen Süre : 0.40100932121276855 sn 
+
+
+Dosyada Geçen Süre : 0.40502285957336426 sn 
+
+
+Toplamda Geçen Süre : 1.274001121520996 sn 
 
 
 Ýlk Okuma
- Experiment12
+ Experiment12 0.013019800186157227
    Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
 0   12  J1   0   0   8   7   4     2     36
 1   12  J2   1   8   9   9   6     5      4
 2   12  J3   6   3   0   0   0     3     43
 3   12  J4   0   3   0   2   0     6      3
 4   12  J5   0   0   5   7  10    10     39 
- Experiment12Experiment12
+ Experiment12
 Sum Eklendi
  Experiment12
   Job  O1  O2  O3  O4   O5  PROC  SETUP  SUM
@@ -258,28 +267,34 @@ Name: Job, dtype: object
 
 Sýralama Eklendi
  Experiment12
-{'J4': ['O4', 'O2'], 'J3': ['O2', 'O1'], 'J5': ['O3', 'O4', 'O5'], 'J1': ['O5', 'O4', 'O3'], 'J2': ['O5', 'O4', 'O3', 'O1', 'O2']} 
+{'J4': ['O4', 'O2'], 'J1': ['O5', 'O4', 'O3'], 'J2': ['O5', 'O4', 'O3', 'O1', 'O2'], 'J5': ['O3', 'O4', 'O5'], 'J3': ['O2', 'O1']} 
 
 
 orderToplamListesi Eklendi
  Experiment12
-{'O4': 505, 'O5': 605, 'O1': 306, 'O2': 346, 'O3': 435} 
+{'O1': 306, 'O4': 505, 'O2': 346, 'O3': 435, 'O5': 605} 
 
 
 Toplam Eklendi
  Experiment12
-2197 
+Toplam 2197 Geçen Süre : 0.42699646949768066 sn 
+
+
+Dosyada Geçen Süre : 0.432004451751709 sn 
+
+
+Toplamda Geçen Süre : 1.7170002460479736 sn 
 
 
 Ýlk Okuma
- Experiment13
+ Experiment13 0.013982295989990234
    Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
 0   13  J1   8   0   0   0   0     8      7
 1   13  J2   6   8   1   0   0     9     91
 2   13  J3   3   9   4   0   1     4     46
 3   13  J4   0   4   3   0   0     3     37
 4   13  J5   0   0   6   4   7     3     49 
- Experiment13Experiment13
+ Experiment13
 Sum Eklendi
  Experiment13
   Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
@@ -324,28 +339,34 @@ Name: Job, dtype: object
 
 Sýralama Eklendi
  Experiment13
-{'J4': ['O3', 'O2'], 'J3': ['O5', 'O3', 'O1', 'O2'], 'J5': ['O4', 'O3', 'O5'], 'J1': ['O1'], 'J2': ['O3', 'O1', 'O2']} 
+{'J4': ['O3', 'O2'], 'J1': ['O1'], 'J2': ['O3', 'O1', 'O2'], 'J3': ['O5', 'O3', 'O1', 'O2'], 'J5': ['O4', 'O3', 'O5']} 
 
 
 orderToplamListesi Eklendi
  Experiment13
-{'O4': 190, 'O5': 279, 'O1': 497, 'O2': 569, 'O3': 443} 
+{'O1': 497, 'O4': 190, 'O2': 569, 'O3': 443, 'O5': 279} 
 
 
 Toplam Eklendi
  Experiment13
-1978 
+Toplam 1978 Geçen Süre : 0.38597893714904785 sn 
+
+
+Dosyada Geçen Süre : 0.38997888565063477 sn 
+
+
+Toplamda Geçen Süre : 2.1160008907318115 sn 
 
 
 Ýlk Okuma
- Experiment14
+ Experiment14 0.01602029800415039
    Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
 0   14  J1   0   1   2   4   0     2     70
 1   14  J2   6   9   4   0   0     6     48
 2   14  J3   0   4   5   2  10     8     37
 3   14  J4   3   0   0   0   1    10     52
 4   14  J5   5   8   1   1   5     5     22 
- Experiment14Experiment14
+ Experiment14
 Sum Eklendi
  Experiment14
   Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
@@ -390,28 +411,34 @@ Name: Job, dtype: object
 
 Sýralama Eklendi
  Experiment14
-{'J4': ['O5', 'O1'], 'J3': ['O2', 'O3', 'O4', 'O5'], 'J5': ['O5', 'O1', 'O3', 'O4', 'O2'], 'J1': ['O2', 'O3', 'O4'], 'J2': ['O3', 'O1', 'O2']} 
+{'J4': ['O5', 'O1'], 'J1': ['O2', 'O3', 'O4'], 'J2': ['O3', 'O1', 'O2'], 'J3': ['O2', 'O3', 'O4', 'O5'], 'J5': ['O5', 'O1', 'O3', 'O4', 'O2']} 
 
 
 orderToplamListesi Eklendi
  Experiment14
-{'O4': 585, 'O5': 665, 'O1': 406, 'O2': 529, 'O3': 569} 
+{'O1': 406, 'O4': 585, 'O2': 529, 'O3': 569, 'O5': 665} 
 
 
 Toplam Eklendi
  Experiment14
-2754 
+Toplam 2754 Geçen Süre : 0.39499998092651367 sn 
+
+
+Dosyada Geçen Süre : 0.3989989757537842 sn 
+
+
+Toplamda Geçen Süre : 2.5270016193389893 sn 
 
 
 Ýlk Okuma
- Experiment15
+ Experiment15 0.013992071151733398
    Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
 0   15  J1   7   9   8   2   5    10    108
 1   15  J2   3   4   7   3   5     5    123
 2   15  J3   0   0   4   5   0     9     49
 3   15  J4   0   9   0   0   0     8     25
 4   15  J5   1   8   0   8   9     3    115 
- Experiment15Experiment15
+ Experiment15
 Sum Eklendi
  Experiment15
   Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
@@ -456,28 +483,34 @@ Name: Job, dtype: object
 
 Sýralama Eklendi
  Experiment15
-{'J4': ['O2'], 'J3': ['O3', 'O4'], 'J5': ['O4', 'O1', 'O2', 'O5'], 'J2': ['O1', 'O4', 'O2', 'O5', 'O3'], 'J1': ['O4', 'O5', 'O1', 'O3', 'O2']} 
+{'J4': ['O2'], 'J1': ['O4', 'O5', 'O1', 'O3', 'O2'], 'J2': ['O1', 'O4', 'O2', 'O5', 'O3'], 'J5': ['O4', 'O1', 'O2', 'O5'], 'J3': ['O3', 'O4']} 
 
 
 orderToplamListesi Eklendi
  Experiment15
-{'O4': 781, 'O5': 831, 'O1': 901, 'O2': 1071, 'O3': 981} 
+{'O1': 901, 'O4': 781, 'O2': 1071, 'O3': 981, 'O5': 831} 
 
 
 Toplam Eklendi
  Experiment15
-4565 
+Toplam 4565 Geçen Süre : 0.41498875617980957 sn 
+
+
+Dosyada Geçen Süre : 0.4219968318939209 sn 
+
+
+Toplamda Geçen Süre : 2.960012435913086 sn 
 
 
 Ýlk Okuma
- Experiment16
+ Experiment16 0.014979124069213867
    Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
 0   16  J1   0   6  10   0   0     1     89
 1   16  J2   3   4  10   2   8     5     73
 2   16  J3   0   0   0   9   5    10      2
 3   16  J4   9   8   8   4   7     4     38
 4   16  J5   4   0   0   0   0     3     68 
- Experiment16Experiment16
+ Experiment16
 Sum Eklendi
  Experiment16
   Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
@@ -522,28 +555,34 @@ Name: Job, dtype: object
 
 Sýralama Eklendi
  Experiment16
-{'J4': ['O4', 'O5', 'O2', 'O3', 'O1'], 'J3': ['O5', 'O4'], 'J5': ['O1'], 'J1': ['O2', 'O3'], 'J2': ['O4', 'O1', 'O2', 'O5', 'O3']} 
+{'J4': ['O4', 'O5', 'O2', 'O3', 'O1'], 'J1': ['O2', 'O3'], 'J2': ['O4', 'O1', 'O2', 'O5', 'O3'], 'J3': ['O5', 'O4'], 'J5': ['O1']} 
 
 
 orderToplamListesi Eklendi
  Experiment16
-{'O4': 592, 'O5': 667, 'O1': 607, 'O2': 627, 'O3': 717} 
+{'O1': 607, 'O4': 592, 'O2': 627, 'O3': 717, 'O5': 667} 
 
 
 Toplam Eklendi
  Experiment16
-3210 
+Toplam 3210 Geçen Süre : 0.3799757957458496 sn 
+
+
+Dosyada Geçen Süre : 0.3839998245239258 sn 
+
+
+Toplamda Geçen Süre : 3.353006362915039 sn 
 
 
 Ýlk Okuma
- Experiment17
+ Experiment17 0.015003681182861328
    Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
 0   17  J1   5   0   0   0   0     3     48
 1   17  J2   0   0   9   4   0     6     27
 2   17  J3   0   5   4   9   0     7     47
 3   17  J4   7   0   0   0   4     1      3
 4   17  J5   9   7   6   5   8     1     24 
- Experiment17Experiment17
+ Experiment17
 Sum Eklendi
  Experiment17
   Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
@@ -588,28 +627,34 @@ Name: Job, dtype: object
 
 Sýralama Eklendi
  Experiment17
-{'J4': ['O5', 'O1'], 'J3': ['O3', 'O4', 'O2'], 'J5': ['O5', 'O1', 'O4', 'O3', 'O2'], 'J1': ['O1'], 'J2': ['O4', 'O3']} 
+{'J4': ['O5', 'O1'], 'J1': ['O1'], 'J2': ['O4', 'O3'], 'J3': ['O3', 'O4', 'O2'], 'J5': ['O5', 'O1', 'O4', 'O3', 'O2']} 
 
 
 orderToplamListesi Eklendi
  Experiment17
-{'O4': 379, 'O5': 46, 'O1': 136, 'O2': 414, 'O3': 316} 
+{'O1': 136, 'O4': 379, 'O2': 414, 'O3': 316, 'O5': 46} 
 
 
 Toplam Eklendi
  Experiment17
-1291 
+Toplam 1291 Geçen Süre : 0.42099928855895996 sn 
+
+
+Dosyada Geçen Süre : 0.4270024299621582 sn 
+
+
+Toplamda Geçen Süre : 3.7910006046295166 sn 
 
 
 Ýlk Okuma
- Experiment18
+ Experiment18 0.013983726501464844
    Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
 0   18  J1  10   7   0   0   0     8    128
 1   18  J2   0   0   6   8  10     9     34
 2   18  J3   0   0   9   0   0    10    178
 3   18  J4   0   0   0   5   9     1    136
 4   18  J5   0   0   6   0   0     8     12 
- Experiment18Experiment18
+ Experiment18
 Sum Eklendi
  Experiment18
   Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
@@ -654,28 +699,34 @@ Name: Job, dtype: object
 
 Sýralama Eklendi
  Experiment18
-{'J4': ['O4', 'O5'], 'J3': ['O3'], 'J5': ['O3'], 'J2': ['O4', 'O5', 'O3'], 'J1': ['O2', 'O1']} 
+{'J4': ['O4', 'O5'], 'J1': ['O2', 'O1'], 'J2': ['O4', 'O5', 'O3'], 'J3': ['O3'], 'J5': ['O3']} 
 
 
 orderToplamListesi Eklendi
  Experiment18
-{'O4': 316, 'O5': 406, 'O1': 724, 'O2': 644, 'O3': 992} 
+{'O1': 724, 'O4': 316, 'O2': 644, 'O3': 992, 'O5': 406} 
 
 
 Toplam Eklendi
  Experiment18
-3082 
+Toplam 3082 Geçen Süre : 0.3759925365447998 sn 
+
+
+Dosyada Geçen Süre : 0.3800036907196045 sn 
+
+
+Toplamda Geçen Süre : 4.181001424789429 sn 
 
 
 Ýlk Okuma
- Experiment19
+ Experiment19 0.01299285888671875
    Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
 0   19  J1   0   0   0   5  10     9     53
 1   19  J2   7   3  10   9   5     8     38
 2   19  J3   4   3   6  10   0     8     47
 3   19  J4  10   0   0   0   0     7     47
 4   19  J5   9   0   8  10   0     3     54 
- Experiment19Experiment19
+ Experiment19
 Sum Eklendi
  Experiment19
   Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
@@ -720,28 +771,34 @@ Name: Job, dtype: object
 
 Sýralama Eklendi
  Experiment19
-{'J4': ['O1'], 'J3': ['O4', 'O2', 'O1', 'O3'], 'J5': ['O1', 'O3', 'O4'], 'J1': ['O4', 'O5'], 'J2': ['O2', 'O1', 'O4', 'O3', 'O5']} 
+{'J4': ['O1'], 'J1': ['O4', 'O5'], 'J2': ['O2', 'O1', 'O4', 'O3', 'O5'], 'J3': ['O4', 'O2', 'O1', 'O3'], 'J5': ['O1', 'O3', 'O4']} 
 
 
 orderToplamListesi Eklendi
  Experiment19
-{'O4': 861, 'O5': 981, 'O1': 789, 'O2': 733, 'O3': 941} 
+{'O1': 789, 'O4': 861, 'O2': 733, 'O3': 941, 'O5': 981} 
 
 
 Toplam Eklendi
  Experiment19
-4305 
+Toplam 4305 Geçen Süre : 0.40001797676086426 sn 
+
+
+Dosyada Geçen Süre : 0.4049975872039795 sn 
+
+
+Toplamda Geçen Süre : 4.599004030227661 sn 
 
 
 Ýlk Okuma
- Experiment2
+ Experiment2 0.014983415603637695
    Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
 0    2  J1   0   0   9   6   0     6     60
 1    2  J2   0   0   0   8   0     6     26
 2    2  J3   7   6   1   5  10     7     37
 3    2  J4   0   0   1   0   0     6     35
 4    2  J5   0   6   1   0   0     7     79 
- Experiment2Experiment2
+ Experiment2
 Sum Eklendi
  Experiment2
   Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
@@ -786,28 +843,34 @@ Name: Job, dtype: object
 
 Sýralama Eklendi
  Experiment2
-{'J4': ['O3'], 'J3': ['O3', 'O4', 'O2', 'O1', 'O5'], 'J5': ['O3', 'O2'], 'J2': ['O4'], 'J1': ['O3', 'O4']} 
+{'J4': ['O3'], 'J1': ['O3', 'O4'], 'J2': ['O4'], 'J3': ['O3', 'O4', 'O2', 'O1', 'O5'], 'J5': ['O3', 'O2']} 
 
 
 orderToplamListesi Eklendi
  Experiment2
-{'O4': 472, 'O5': 633, 'O1': 563, 'O2': 514, 'O3': 437} 
+{'O1': 563, 'O4': 472, 'O2': 514, 'O3': 437, 'O5': 633} 
 
 
 Toplam Eklendi
  Experiment2
-2619 
+Toplam 2619 Geçen Süre : 0.4109797477722168 sn 
+
+
+Dosyada Geçen Süre : 0.41500377655029297 sn 
+
+
+Toplamda Geçen Süre : 5.024000406265259 sn 
 
 
 Ýlk Okuma
- Experiment20
+ Experiment20 0.014019012451171875
    Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
 0   20  J1   0   0  10   0   0     1    110
 1   20  J2   0   5   9   6   0     2     57
 2   20  J3   5   0   0   0   0     6      1
 3   20  J4   0   0   7   0   6     3     13
 4   20  J5   0   5   0   0   0     1    136 
- Experiment20Experiment20
+ Experiment20
 Sum Eklendi
  Experiment20
   Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
@@ -852,28 +915,34 @@ Name: Job, dtype: object
 
 Sýralama Eklendi
  Experiment20
-{'J4': ['O5', 'O3'], 'J3': ['O1'], 'J5': ['O2'], 'J2': ['O3', 'O2', 'O4'], 'J1': ['O3']} 
+{'J4': ['O5', 'O3'], 'J1': ['O3'], 'J2': ['O3', 'O2', 'O4'], 'J5': ['O2'], 'J3': ['O1']} 
 
 
 orderToplamListesi Eklendi
  Experiment20
-{'O4': 180, 'O5': 62, 'O1': 31, 'O2': 441, 'O3': 300} 
+{'O1': 31, 'O4': 180, 'O2': 441, 'O3': 300, 'O5': 62} 
 
 
 Toplam Eklendi
  Experiment20
-1014 
+Toplam 1014 Geçen Süre : 0.38802003860473633 sn 
+
+
+Dosyada Geçen Süre : 0.3930196762084961 sn 
+
+
+Toplamda Geçen Süre : 5.4270007610321045 sn 
 
 
 Ýlk Okuma
- Experiment21
+ Experiment21 0.012983083724975586
    Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
 0   21  J1   3   2   4   7   8     7     93
 1   21  J2   0   0   7   9   0     6    110
 2   21  J3   0   0   9   0   0     1     26
 3   21  J4   0   8   0   0  10     9     65
 4   21  J5   4  10   0   8   4     3    111 
- Experiment21Experiment21
+ Experiment21
 Sum Eklendi
  Experiment21
   Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
@@ -918,28 +987,34 @@ Name: Job, dtype: object
 
 Sýralama Eklendi
  Experiment21
-{'J4': ['O2', 'O5'], 'J3': ['O3'], 'J5': ['O1', 'O5', 'O4', 'O2'], 'J2': ['O4', 'O3'], 'J1': ['O2', 'O5', 'O1', 'O3', 'O4']} 
+{'J4': ['O2', 'O5'], 'J1': ['O2', 'O5', 'O1', 'O3', 'O4'], 'J2': ['O4', 'O3'], 'J5': ['O1', 'O5', 'O4', 'O2'], 'J3': ['O3']} 
 
 
 orderToplamListesi Eklendi
  Experiment21
-{'O4': 918, 'O5': 820, 'O1': 841, 'O2': 764, 'O3': 869} 
+{'O1': 841, 'O4': 918, 'O2': 764, 'O3': 869, 'O5': 820} 
 
 
 Toplam Eklendi
  Experiment21
-4212 
+Toplam 4212 Geçen Süre : 0.43497681617736816 sn 
+
+
+Dosyada Geçen Süre : 0.43997883796691895 sn 
+
+
+Toplamda Geçen Süre : 5.876999616622925 sn 
 
 
 Ýlk Okuma
- Experiment22
+ Experiment22 0.011996746063232422
    Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
 0   22  J1   0   0   9   7   0     4     26
 1   22  J2   3   0   0   0   0     1     46
 2   22  J3   6   5  10   3   7     1     93
 3   22  J4   0   0   0   0   6     6     28
 4   22  J5  10   9   4   8   1     7     11 
- Experiment22Experiment22
+ Experiment22
 Sum Eklendi
  Experiment22
   Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
@@ -984,28 +1059,34 @@ Name: Job, dtype: object
 
 Sýralama Eklendi
  Experiment22
-{'J4': ['O5'], 'J3': ['O4', 'O3', 'O2', 'O1', 'O5'], 'J5': ['O5', 'O3', 'O4', 'O2', 'O1'], 'J2': ['O1'], 'J1': ['O4', 'O3']} 
+{'J4': ['O5'], 'J1': ['O4', 'O3'], 'J2': ['O1'], 'J5': ['O5', 'O3', 'O4', 'O2', 'O1'], 'J3': ['O4', 'O3', 'O2', 'O1', 'O5']} 
 
 
 orderToplamListesi Eklendi
  Experiment22
-{'O4': 429, 'O5': 345, 'O1': 562, 'O2': 492, 'O3': 373} 
+{'O1': 562, 'O4': 429, 'O2': 492, 'O3': 373, 'O5': 345} 
 
 
 Toplam Eklendi
  Experiment22
-2201 
+Toplam 2201 Geçen Süre : 0.38400793075561523 sn 
+
+
+Dosyada Geçen Süre : 0.3879969120025635 sn 
+
+
+Toplamda Geçen Süre : 6.275000810623169 sn 
 
 
 Ýlk Okuma
- Experiment23
+ Experiment23 0.01601719856262207
    Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
 0   23  J1   7   0   0   0   0     3     76
 1   23  J2   0   4   0   0   0    10    144
 2   23  J3   3   6   2   7  10     3    128
 3   23  J4   0   8   7   1   9     3      3
 4   23  J5   5   6   8   6   4    10     87 
- Experiment23Experiment23
+ Experiment23
 Sum Eklendi
  Experiment23
   Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
@@ -1050,28 +1131,34 @@ Name: Job, dtype: object
 
 Sýralama Eklendi
  Experiment23
-{'J4': ['O4', 'O3', 'O2', 'O5'], 'J3': ['O2', 'O3', 'O1', 'O4', 'O5'], 'J5': ['O5', 'O1', 'O2', 'O4', 'O3'], 'J1': ['O1'], 'J2': ['O2']} 
+{'J4': ['O4', 'O3', 'O2', 'O5'], 'J1': ['O1'], 'J2': ['O2'], 'J5': ['O5', 'O1', 'O2', 'O4', 'O3'], 'J3': ['O2', 'O3', 'O1', 'O4', 'O5']} 
 
 
 orderToplamListesi Eklendi
  Experiment23
-{'O4': 868, 'O5': 698, 'O1': 748, 'O2': 808, 'O3': 948} 
+{'O1': 748, 'O4': 868, 'O2': 808, 'O3': 948, 'O5': 698} 
 
 
 Toplam Eklendi
  Experiment23
-4070 
+Toplam 4070 Geçen Süre : 0.382230281829834 sn 
+
+
+Dosyada Geçen Süre : 0.3872249126434326 sn 
+
+
+Toplamda Geçen Süre : 6.67325496673584 sn 
 
 
 Ýlk Okuma
- Experiment24
+ Experiment24 0.013018608093261719
    Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
 0   24  J1   0   0   6   8   0     7     78
 1   24  J2   0   8  10   6   0     6     29
 2   24  J3   8   0   0   0   0     9    140
 3   24  J4   2   8   4   9   0     9     48
 4   24  J5   7  10   7   5   4     4    179 
- Experiment24Experiment24
+ Experiment24
 Sum Eklendi
  Experiment24
   Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
@@ -1116,28 +1203,34 @@ Name: Job, dtype: object
 
 Sýralama Eklendi
  Experiment24
-{'J1': ['O3', 'O4'], 'J3': ['O1'], 'J5': ['O4', 'O1', 'O3', 'O2', 'O5'], 'J2': ['O4', 'O2', 'O3'], 'J4': ['O1', 'O3', 'O2', 'O4']} 
+{'J4': ['O1', 'O3', 'O2', 'O4'], 'J1': ['O3', 'O4'], 'J2': ['O4', 'O2', 'O3'], 'J5': ['O4', 'O1', 'O3', 'O2', 'O5'], 'J3': ['O1']} 
 
 
 orderToplamListesi Eklendi
  Experiment24
-{'O4': 1015, 'O5': 1127, 'O1': 1043, 'O2': 1111, 'O3': 1071} 
+{'O1': 1043, 'O4': 1015, 'O2': 1111, 'O3': 1071, 'O5': 1127} 
 
 
 Toplam Eklendi
  Experiment24
-5367 
+Toplam 5367 Geçen Süre : 0.4140195846557617 sn 
+
+
+Dosyada Geçen Süre : 0.41801929473876953 sn 
+
+
+Toplamda Geçen Süre : 7.102235555648804 sn 
 
 
 Ýlk Okuma
- Experiment25
+ Experiment25 0.014007568359375
    Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
 0   25  J1   0   0  10   0   0     8      2
 1   25  J2   8   7   0   0   0     8     12
 2   25  J3   0   0   5   2   9     7     22
 3   25  J4   8   0   4   3   0     7     45
 4   25  J5   0   5   7   1  10     3     23 
- Experiment25Experiment25
+ Experiment25
 Sum Eklendi
  Experiment25
   Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
@@ -1182,28 +1275,34 @@ Name: Job, dtype: object
 
 Sýralama Eklendi
  Experiment25
-{'J2': ['O2', 'O1'], 'J3': ['O4', 'O3', 'O5'], 'J5': ['O3', 'O4', 'O2', 'O5'], 'J1': ['O3'], 'J4': ['O4', 'O3', 'O1']} 
+{'J4': ['O4', 'O3', 'O1'], 'J1': ['O3'], 'J2': ['O2', 'O1'], 'J3': ['O4', 'O3', 'O5'], 'J5': ['O3', 'O4', 'O2', 'O5']} 
 
 
 orderToplamListesi Eklendi
  Experiment25
-{'O4': 506, 'O5': 440, 'O1': 590, 'O2': 242, 'O3': 534} 
+{'O1': 590, 'O4': 506, 'O2': 242, 'O3': 534, 'O5': 440} 
 
 
 Toplam Eklendi
  Experiment25
-2312 
+Toplam 2312 Geçen Süre : 0.3886404037475586 sn 
+
+
+Dosyada Geçen Süre : 0.3946399688720703 sn 
+
+
+Toplamda Geçen Süre : 7.506871223449707 sn 
 
 
 Ýlk Okuma
- Experiment3
+ Experiment3 0.01200246810913086
    Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
 0    3  J1   0   0   4   5   0     1     18
 1    3  J2   0   4   7   0   0     8      8
 2    3  J3   7   5   6   5   1    10     44
 3    3  J4  10   0   0   0   0     2     44
 4    3  J5   0   6   4   5   0     5      6 
- Experiment3Experiment3
+ Experiment3
 Sum Eklendi
  Experiment3
   Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
@@ -1248,28 +1347,34 @@ Name: Job, dtype: object
 
 Sýralama Eklendi
  Experiment3
-{'J4': ['O1'], 'J3': ['O2', 'O3', 'O5', 'O4', 'O1'], 'J5': ['O3', 'O4', 'O2'], 'J1': ['O3', 'O4'], 'J2': ['O2', 'O3']} 
+{'J4': ['O1'], 'J1': ['O3', 'O4'], 'J2': ['O2', 'O3'], 'J3': ['O2', 'O3', 'O5', 'O4', 'O1'], 'J5': ['O3', 'O4', 'O2']} 
 
 
 orderToplamListesi Eklendi
  Experiment3
-{'O4': 482, 'O5': 432, 'O1': 552, 'O2': 362, 'O3': 422} 
+{'O1': 552, 'O4': 482, 'O2': 362, 'O3': 422, 'O5': 432} 
 
 
 Toplam Eklendi
  Experiment3
-2250 
+Toplam 2250 Geçen Süre : 0.3999950885772705 sn 
+
+
+Dosyada Geçen Süre : 0.40900397300720215 sn 
+
+
+Toplamda Geçen Süre : 7.9288740158081055 sn 
 
 
 Ýlk Okuma
- Experiment4
+ Experiment4 0.012000083923339844
    Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
 0    4  J1   0   0   9  10   0     2     94
 1    4  J2  10   0   0   0   0     8     65
 2    4  J3   0   0   0   0   8     3     60
 3    4  J4   0   3   6   0   0     9     97
 4    4  J5   2   8   4   9   0     1     65 
- Experiment4Experiment4
+ Experiment4
 Sum Eklendi
  Experiment4
   Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
@@ -1314,28 +1419,34 @@ Name: Job, dtype: object
 
 Sýralama Eklendi
  Experiment4
-{'J2': ['O1'], 'J3': ['O5'], 'J5': ['O1', 'O3', 'O2', 'O4'], 'J1': ['O3', 'O4'], 'J4': ['O2', 'O3']} 
+{'J4': ['O2', 'O3'], 'J1': ['O3', 'O4'], 'J2': ['O1'], 'J5': ['O1', 'O3', 'O2', 'O4'], 'J3': ['O5']} 
 
 
 orderToplamListesi Eklendi
  Experiment4
-{'O4': 304, 'O5': 84, 'O1': 449, 'O2': 573, 'O3': 627} 
+{'O1': 449, 'O4': 304, 'O2': 573, 'O3': 627, 'O5': 84} 
 
 
 Toplam Eklendi
  Experiment4
-2037 
+Toplam 2037 Geçen Süre : 0.37199854850769043 sn 
+
+
+Dosyada Geçen Süre : 0.37599802017211914 sn 
+
+
+Toplamda Geçen Süre : 8.319888830184937 sn 
 
 
 Ýlk Okuma
- Experiment5
+ Experiment5 0.012976408004760742
    Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
 0    5  J1   4   3   2   9   9     1    180
 1    5  J2   0   2   7  10   0     7     75
 2    5  J3   0   8   7   0   0     1     70
 3    5  J4   1   8   8   9   6     2    144
 4    5  J5   0   0   0   5   0     1    154 
- Experiment5Experiment5
+ Experiment5
 Sum Eklendi
  Experiment5
   Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
@@ -1380,28 +1491,34 @@ Name: Job, dtype: object
 
 Sýralama Eklendi
  Experiment5
-{'J2': ['O2', 'O3', 'O4'], 'J3': ['O3', 'O2'], 'J5': ['O4'], 'J1': ['O4', 'O3', 'O2', 'O1', 'O5'], 'J4': ['O2', 'O3', 'O4', 'O1', 'O5']} 
+{'J4': ['O2', 'O3', 'O4', 'O1', 'O5'], 'J1': ['O4', 'O3', 'O2', 'O1', 'O5'], 'J2': ['O2', 'O3', 'O4'], 'J5': ['O4'], 'J3': ['O3', 'O2']} 
 
 
 orderToplamListesi Eklendi
  Experiment5
-{'O4': 853, 'O5': 867, 'O1': 855, 'O2': 819, 'O3': 835} 
+{'O1': 855, 'O4': 853, 'O2': 819, 'O3': 835, 'O5': 867} 
 
 
 Toplam Eklendi
  Experiment5
-4229 
+Toplam 4229 Geçen Süre : 0.38297510147094727 sn 
+
+
+Dosyada Geçen Süre : 0.3869750499725342 sn 
+
+
+Toplamda Geçen Süre : 8.716870784759521 sn 
 
 
 Ýlk Okuma
- Experiment6
+ Experiment6 0.01399850845336914
    Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
 0    6  J1   9   3   1   6   3     4     41
 1    6  J2   0   0   0   5   0     6     48
 2    6  J3   0   0   3   8   7     4      5
 3    6  J4   0   6   5   0   0     6     40
 4    6  J5   0   0   0   5   4     8     47 
- Experiment6Experiment6
+ Experiment6
 Sum Eklendi
  Experiment6
   Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
@@ -1446,28 +1563,34 @@ Name: Job, dtype: object
 
 Sýralama Eklendi
  Experiment6
-{'J4': ['O3', 'O2'], 'J3': ['O3', 'O5', 'O4'], 'J5': ['O5', 'O4'], 'J2': ['O4'], 'J1': ['O5', 'O4', 'O3', 'O2', 'O1']} 
+{'J4': ['O3', 'O2'], 'J1': ['O5', 'O4', 'O3', 'O2', 'O1'], 'J2': ['O4'], 'J5': ['O5', 'O4'], 'J3': ['O3', 'O5', 'O4']} 
 
 
 orderToplamListesi Eklendi
  Experiment6
-{'O4': 457, 'O5': 433, 'O1': 509, 'O2': 473, 'O3': 461} 
+{'O1': 509, 'O4': 457, 'O2': 473, 'O3': 461, 'O5': 433} 
 
 
 Toplam Eklendi
  Experiment6
-2333 
+Toplam 2333 Geçen Süre : 0.410003662109375 sn 
+
+
+Dosyada Geçen Süre : 0.4160010814666748 sn 
+
+
+Toplamda Geçen Süre : 9.142894744873047 sn 
 
 
 Ýlk Okuma
- Experiment7
+ Experiment7 0.013985872268676758
    Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
 0    7  J1   1   5   0   4   8     9     35
 1    7  J2   5   5   4  10   4     6     49
 2    7  J3   0   5   6   9   0     7      7
 3    7  J4   7   6   0   0   0     6     18
 4    7  J5   0   0  10   8   5     3      0 
- Experiment7Experiment7
+ Experiment7
 Sum Eklendi
  Experiment7
   Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
@@ -1512,28 +1635,34 @@ Name: Job, dtype: object
 
 Sýralama Eklendi
  Experiment7
-{'J4': ['O2', 'O1'], 'J3': ['O2', 'O3', 'O4'], 'J5': ['O5', 'O4', 'O3'], 'J1': ['O4', 'O2', 'O1', 'O5'], 'J2': ['O5', 'O1', 'O2', 'O4', 'O3']} 
+{'J4': ['O2', 'O1'], 'J1': ['O4', 'O2', 'O1', 'O5'], 'J2': ['O5', 'O1', 'O2', 'O4', 'O3'], 'J3': ['O2', 'O3', 'O4'], 'J5': ['O5', 'O4', 'O3']} 
 
 
 orderToplamListesi Eklendi
  Experiment7
-{'O4': 702, 'O5': 582, 'O1': 612, 'O2': 642, 'O3': 726} 
+{'O1': 612, 'O4': 702, 'O2': 642, 'O3': 726, 'O5': 582} 
 
 
 Toplam Eklendi
  Experiment7
-3264 
+Toplam 3264 Geçen Süre : 0.3937644958496094 sn 
+
+
+Dosyada Geçen Süre : 0.3977642059326172 sn 
+
+
+Toplamda Geçen Süre : 9.55063271522522 sn 
 
 
 Ýlk Okuma
- Experiment8
+ Experiment8 0.014004230499267578
    Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
 0    8  J1   0   0   9   0   0     2     31
 1    8  J2   0   4   8   0   0     9     12
 2    8  J3   3   7   0   8   0     6     37
 3    8  J4   0   0   0   0   2     5    199
 4    8  J5   0   0   0   0   7     3    129 
- Experiment8Experiment8
+ Experiment8
 Sum Eklendi
  Experiment8
   Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
@@ -1578,28 +1707,34 @@ Name: Job, dtype: object
 
 Sýralama Eklendi
  Experiment8
-{'J2': ['O3', 'O2'], 'J3': ['O2', 'O1', 'O4'], 'J5': ['O5'], 'J1': ['O3'], 'J4': ['O5']} 
+{'J4': ['O5'], 'J1': ['O3'], 'J2': ['O3', 'O2'], 'J5': ['O5'], 'J3': ['O2', 'O1', 'O4']} 
 
 
 orderToplamListesi Eklendi
  Experiment8
-{'O4': 314, 'O5': 673, 'O1': 266, 'O2': 248, 'O3': 133} 
+{'O1': 266, 'O4': 314, 'O2': 248, 'O3': 133, 'O5': 673} 
 
 
 Toplam Eklendi
  Experiment8
-1634 
+Toplam 1634 Geçen Süre : 0.40102148056030273 sn 
+
+
+Dosyada Geçen Süre : 0.40502142906188965 sn 
+
+
+Toplamda Geçen Süre : 9.968656063079834 sn 
 
 
 Ýlk Okuma
- Experiment9
+ Experiment9 0.013994455337524414
    Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
 0    9  J1   9   5   6   9   5     2    124
 1    9  J2   0  10  10   9   7     3     67
 2    9  J3   3   4   2   1   0     1     72
 3    9  J4  10   3   0   5   8     6    129
 4    9  J5   0   1   9   2   7     7     56 
- Experiment9Experiment9
+ Experiment9
 Sum Eklendi
  Experiment9
   Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
@@ -1644,16 +1779,22 @@ Name: Job, dtype: object
 
 Sýralama Eklendi
  Experiment9
-{'J1': ['O2', 'O5', 'O3', 'O4', 'O1'], 'J3': ['O4', 'O3', 'O1', 'O2'], 'J5': ['O2', 'O4', 'O5', 'O3'], 'J2': ['O4', 'O3', 'O2', 'O5'], 'J4': ['O2', 'O4', 'O5', 'O1']} 
+{'J4': ['O2', 'O4', 'O5', 'O1'], 'J1': ['O2', 'O5', 'O3', 'O4', 'O1'], 'J2': ['O4', 'O3', 'O2', 'O5'], 'J5': ['O2', 'O4', 'O5', 'O3'], 'J3': ['O4', 'O3', 'O1', 'O2']} 
 
 
 orderToplamListesi Eklendi
  Experiment9
-{'O4': 815, 'O5': 863, 'O1': 923, 'O2': 785, 'O3': 602} 
+{'O1': 923, 'O4': 815, 'O2': 785, 'O3': 602, 'O5': 863} 
 
 
 Toplam Eklendi
  Experiment9
-3988 
+Toplam 3988 Geçen Süre : 0.4359917640686035 sn 
+
+
+Dosyada Geçen Süre : 0.4409971237182617 sn 
+
+
+Toplamda Geçen Süre : 10.420650720596313 sn 
 
 
