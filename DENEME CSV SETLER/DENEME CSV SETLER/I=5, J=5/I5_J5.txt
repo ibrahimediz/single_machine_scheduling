@@ -1,0 +1,1659 @@
+Ýlk Okuma
+ Experiment1
+   Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
+0    1  J1   2   0   0   0   0     4      2
+1    1  J2   0   1   0   0   0     3    121
+2    1  J3   4   0   0   5   0     2      7
+3    1  J4   0   4   7   0   0     1     94
+4    1  J5   0   0   8   0   4     1     46 
+ Experiment1Experiment1
+Ýlk Okuma
+ Experiment1
+   Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
+0    1  J1   2   0   0   0   0     4      2
+1    1  J2   0   1   0   0   0     3    121
+2    1  J3   4   0   0   5   0     2      7
+3    1  J4   0   4   7   0   0     1     94
+4    1  J5   0   0   8   0   4     1     46 
+ Experiment1Experiment1
+Sum Eklendi
+ Experiment1
+  Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
+0  J1   8   0   0   0   0     4      2   10
+1  J3   8   0   0  10   0     2      7   25
+2  J5   0   0   8   0   4     1     46   58
+3  J4   0   4   7   0   0     1     94  105
+4  J2   0   3   0   0   0     3    121  124 
+
+
+df1 Eklendi
+ Experiment1
+Job  J1  J3  J5  J4  J2
+O1    8   8   0   0   0
+O2    0   0   0   4   3
+O3    0   0   8   7   0
+O4    0  10   0   0   0
+O5    0   0   4   0   0 
+
+
+df2 Eklendi
+ Experiment1
+Job    J1  J3  J5  J4   J2
+O1      8   8   0   0    0
+O2      0   0   0   4    3
+O3      0   0   8   7    0
+O4      0  10   0   0    0
+O5      0   0   4   0    0
+PROC    4   2   1   1    3
+SETUP   2   7  46  94  121 
+
+
+JobListe Eklendi
+ Experiment1
+0    J1
+1    J3
+2    J5
+3    J4
+4    J2
+Name: Job, dtype: object 
+
+
+Sýralama Eklendi
+ Experiment1
+{'J4': ['O3', 'O2'], 'J3': ['O1', 'O4'], 'J5': ['O5', 'O3'], 'J1': ['O1'], 'J2': ['O2']} 
+
+
+orderToplamListesi Eklendi
+ Experiment1
+{'O4': 35, 'O5': 85, 'O1': 25, 'O2': 322, 'O3': 194} 
+
+
+Toplam Eklendi
+ Experiment1
+661 
+
+
+Ýlk Okuma
+ Experiment10
+   Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
+0   10  J1   9   3  10   8   2     1      3
+1   10  J2   5   6   5   2   6     6     33
+2   10  J3   0   5   9   7   0     6     39
+3   10  J4   0   0   0   0   6     6      3
+4   10  J5   0   0   1   5   4     1     23 
+ Experiment10Experiment10
+Sum Eklendi
+ Experiment10
+  Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
+0  J5   0   0   1   5   4     1     23   33
+1  J1   9   3  10   8   2     1      3   35
+2  J4   0   0   0   0  36     6      3   39
+3  J3   0  30  54  42   0     6     39  165
+4  J2  30  36  30  12  36     6     33  177 
+
+
+df1 Eklendi
+ Experiment10
+Job  J5  J1  J4  J3  J2
+O1    0   9   0   0  30
+O2    0   3   0  30  36
+O3    1  10   0  54  30
+O4    5   8   0  42  12
+O5    4   2  36   0  36 
+
+
+df2 Eklendi
+ Experiment10
+Job    J5  J1  J4  J3  J2
+O1      0   9   0   0  30
+O2      0   3   0  30  36
+O3      1  10   0  54  30
+O4      5   8   0  42  12
+O5      4   2  36   0  36
+PROC    1   1   6   6   6
+SETUP  23   3   3  39  33 
+
+
+JobListe Eklendi
+ Experiment10
+0    J5
+1    J1
+2    J4
+3    J3
+4    J2
+Name: Job, dtype: object 
+
+
+Sýralama Eklendi
+ Experiment10
+{'J4': ['O5'], 'J3': ['O2', 'O4', 'O3'], 'J5': ['O3', 'O5', 'O4'], 'J1': ['O5', 'O4', 'O3', 'O2', 'O1'], 'J2': ['O4', 'O3', 'O2', 'O1', 'O5']} 
+
+
+orderToplamListesi Eklendi
+ Experiment10
+{'O4': 317, 'O5': 449, 'O1': 413, 'O2': 383, 'O3': 347} 
+
+
+Toplam Eklendi
+ Experiment10
+1909 
+
+
+Ýlk Okuma
+ Experiment11
+   Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
+0   11  J1   8   4  10   1   4    10      8
+1    1  J2   8   8  10  10   8     1     29
+2   11  J3   0   0   8   5  10     7     32
+3   11  J4  10   1   0   0   0     8     42
+4   11  J5   0   1  10   4   6     9      6 
+ Experiment11Experiment11
+Sum Eklendi
+ Experiment11
+  Job  O1  O2   O3  O4  O5  PROC  SETUP  SUM
+0  J2   8   8   10  10   8     1     29   73
+1  J4  80   8    0   0   0     8     42  130
+2  J3   0   0   56  35  70     7     32  193
+3  J5   0   9   90  36  54     9      6  195
+4  J1  80  40  100  10  40    10      8  278 
+
+
+df1 Eklendi
+ Experiment11
+Job  J2  J4  J3  J5   J1
+O1    8  80   0   0   80
+O2    8   8   0   9   40
+O3   10   0  56  90  100
+O4   10   0  35  36   10
+O5    8   0  70  54   40 
+
+
+df2 Eklendi
+ Experiment11
+Job    J2  J4  J3  J5   J1
+O1      8  80   0   0   80
+O2      8   8   0   9   40
+O3     10   0  56  90  100
+O4     10   0  35  36   10
+O5      8   0  70  54   40
+PROC    1   8   7   9   10
+SETUP  29  42  32   6    8 
+
+
+JobListe Eklendi
+ Experiment11
+0    J2
+1    J4
+2    J3
+3    J5
+4    J1
+Name: Job, dtype: object 
+
+
+Sýralama Eklendi
+ Experiment11
+{'J4': ['O2', 'O1'], 'J3': ['O4', 'O3', 'O5'], 'J5': ['O4', 'O5', 'O3', 'O2'], 'J2': ['O1', 'O2', 'O5', 'O3', 'O4'], 'J1': ['O4', 'O2', 'O5', 'O3', 'O1']} 
+
+
+orderToplamListesi Eklendi
+ Experiment11
+{'O4': 609, 'O5': 689, 'O1': 869, 'O2': 649, 'O3': 789} 
+
+
+Toplam Eklendi
+ Experiment11
+3605 
+
+
+Ýlk Okuma
+ Experiment12
+   Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
+0   12  J1   0   0   8   7   4     2     36
+1   12  J2   1   8   9   9   6     5      4
+2   12  J3   6   3   0   0   0     3     43
+3   12  J4   0   3   0   2   0     6      3
+4   12  J5   0   0   5   7  10    10     39 
+ Experiment12Experiment12
+Sum Eklendi
+ Experiment12
+  Job  O1  O2  O3  O4   O5  PROC  SETUP  SUM
+0  J4   0  18   0  12    0     6      3   33
+1  J3  18   9   0   0    0     3     43   70
+2  J1   0   0  16  14    8     2     36   74
+3  J2   5  40  45  45   30     5      4  169
+4  J5   0   0  50  70  100    10     39  259 
+
+
+df1 Eklendi
+ Experiment12
+Job  J4  J3  J1  J2   J5
+O1    0  18   0   5    0
+O2   18   9   0  40    0
+O3    0   0  16  45   50
+O4   12   0  14  45   70
+O5    0   0   8  30  100 
+
+
+df2 Eklendi
+ Experiment12
+Job    J4  J3  J1  J2   J5
+O1      0  18   0   5    0
+O2     18   9   0  40    0
+O3      0   0  16  45   50
+O4     12   0  14  45   70
+O5      0   0   8  30  100
+PROC    6   3   2   5   10
+SETUP   3  43  36   4   39 
+
+
+JobListe Eklendi
+ Experiment12
+0    J4
+1    J3
+2    J1
+3    J2
+4    J5
+Name: Job, dtype: object 
+
+
+Sýralama Eklendi
+ Experiment12
+{'J4': ['O4', 'O2'], 'J3': ['O2', 'O1'], 'J5': ['O3', 'O4', 'O5'], 'J1': ['O5', 'O4', 'O3'], 'J2': ['O5', 'O4', 'O3', 'O1', 'O2']} 
+
+
+orderToplamListesi Eklendi
+ Experiment12
+{'O4': 505, 'O5': 605, 'O1': 306, 'O2': 346, 'O3': 435} 
+
+
+Toplam Eklendi
+ Experiment12
+2197 
+
+
+Ýlk Okuma
+ Experiment13
+   Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
+0   13  J1   8   0   0   0   0     8      7
+1   13  J2   6   8   1   0   0     9     91
+2   13  J3   3   9   4   0   1     4     46
+3   13  J4   0   4   3   0   0     3     37
+4   13  J5   0   0   6   4   7     3     49 
+ Experiment13Experiment13
+Sum Eklendi
+ Experiment13
+  Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
+0  J4   0  12   9   0   0     3     37   58
+1  J1  64   0   0   0   0     8      7   71
+2  J5   0   0  18  12  21     3     49  100
+3  J3  12  36  16   0   4     4     46  114
+4  J2  54  72   9   0   0     9     91  226 
+
+
+df1 Eklendi
+ Experiment13
+Job  J4  J1  J5  J3  J2
+O1    0  64   0  12  54
+O2   12   0   0  36  72
+O3    9   0  18  16   9
+O4    0   0  12   0   0
+O5    0   0  21   4   0 
+
+
+df2 Eklendi
+ Experiment13
+Job    J4  J1  J5  J3  J2
+O1      0  64   0  12  54
+O2     12   0   0  36  72
+O3      9   0  18  16   9
+O4      0   0  12   0   0
+O5      0   0  21   4   0
+PROC    3   8   3   4   9
+SETUP  37   7  49  46  91 
+
+
+JobListe Eklendi
+ Experiment13
+0    J4
+1    J1
+2    J5
+3    J3
+4    J2
+Name: Job, dtype: object 
+
+
+Sýralama Eklendi
+ Experiment13
+{'J4': ['O3', 'O2'], 'J3': ['O5', 'O3', 'O1', 'O2'], 'J5': ['O4', 'O3', 'O5'], 'J1': ['O1'], 'J2': ['O3', 'O1', 'O2']} 
+
+
+orderToplamListesi Eklendi
+ Experiment13
+{'O4': 190, 'O5': 279, 'O1': 497, 'O2': 569, 'O3': 443} 
+
+
+Toplam Eklendi
+ Experiment13
+1978 
+
+
+Ýlk Okuma
+ Experiment14
+   Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
+0   14  J1   0   1   2   4   0     2     70
+1   14  J2   6   9   4   0   0     6     48
+2   14  J3   0   4   5   2  10     8     37
+3   14  J4   3   0   0   0   1    10     52
+4   14  J5   5   8   1   1   5     5     22 
+ Experiment14Experiment14
+Sum Eklendi
+ Experiment14
+  Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
+0  J1   0   2   4   8   0     2     70   84
+1  J4  30   0   0   0  10    10     52   92
+2  J5  25  40   5   5  25     5     22  122
+3  J2  36  54  24   0   0     6     48  162
+4  J3   0  32  40  16  80     8     37  205 
+
+
+df1 Eklendi
+ Experiment14
+Job  J1  J4  J5  J2  J3
+O1    0  30  25  36   0
+O2    2   0  40  54  32
+O3    4   0   5  24  40
+O4    8   0   5   0  16
+O5    0  10  25   0  80 
+
+
+df2 Eklendi
+ Experiment14
+Job    J1  J4  J5  J2  J3
+O1      0  30  25  36   0
+O2      2   0  40  54  32
+O3      4   0   5  24  40
+O4      8   0   5   0  16
+O5      0  10  25   0  80
+PROC    2  10   5   6   8
+SETUP  70  52  22  48  37 
+
+
+JobListe Eklendi
+ Experiment14
+0    J1
+1    J4
+2    J5
+3    J2
+4    J3
+Name: Job, dtype: object 
+
+
+Sýralama Eklendi
+ Experiment14
+{'J4': ['O5', 'O1'], 'J3': ['O2', 'O3', 'O4', 'O5'], 'J5': ['O5', 'O1', 'O3', 'O4', 'O2'], 'J1': ['O2', 'O3', 'O4'], 'J2': ['O3', 'O1', 'O2']} 
+
+
+orderToplamListesi Eklendi
+ Experiment14
+{'O4': 585, 'O5': 665, 'O1': 406, 'O2': 529, 'O3': 569} 
+
+
+Toplam Eklendi
+ Experiment14
+2754 
+
+
+Ýlk Okuma
+ Experiment15
+   Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
+0   15  J1   7   9   8   2   5    10    108
+1   15  J2   3   4   7   3   5     5    123
+2   15  J3   0   0   4   5   0     9     49
+3   15  J4   0   9   0   0   0     8     25
+4   15  J5   1   8   0   8   9     3    115 
+ Experiment15Experiment15
+Sum Eklendi
+ Experiment15
+  Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
+0  J4   0  72   0   0   0     8     25   97
+1  J3   0   0  36  45   0     9     49  130
+2  J5   3  24   0  24  27     3    115  193
+3  J2  15  20  35  15  25     5    123  233
+4  J1  70  90  80  20  50    10    108  418 
+
+
+df1 Eklendi
+ Experiment15
+Job  J4  J3  J5  J2  J1
+O1    0   0   3  15  70
+O2   72   0  24  20  90
+O3    0  36   0  35  80
+O4    0  45  24  15  20
+O5    0   0  27  25  50 
+
+
+df2 Eklendi
+ Experiment15
+Job    J4  J3   J5   J2   J1
+O1      0   0    3   15   70
+O2     72   0   24   20   90
+O3      0  36    0   35   80
+O4      0  45   24   15   20
+O5      0   0   27   25   50
+PROC    8   9    3    5   10
+SETUP  25  49  115  123  108 
+
+
+JobListe Eklendi
+ Experiment15
+0    J4
+1    J3
+2    J5
+3    J2
+4    J1
+Name: Job, dtype: object 
+
+
+Sýralama Eklendi
+ Experiment15
+{'J4': ['O2'], 'J3': ['O3', 'O4'], 'J5': ['O4', 'O1', 'O2', 'O5'], 'J2': ['O1', 'O4', 'O2', 'O5', 'O3'], 'J1': ['O4', 'O5', 'O1', 'O3', 'O2']} 
+
+
+orderToplamListesi Eklendi
+ Experiment15
+{'O4': 781, 'O5': 831, 'O1': 901, 'O2': 1071, 'O3': 981} 
+
+
+Toplam Eklendi
+ Experiment15
+4565 
+
+
+Ýlk Okuma
+ Experiment16
+   Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
+0   16  J1   0   6  10   0   0     1     89
+1   16  J2   3   4  10   2   8     5     73
+2   16  J3   0   0   0   9   5    10      2
+3   16  J4   9   8   8   4   7     4     38
+4   16  J5   4   0   0   0   0     3     68 
+ Experiment16Experiment16
+Sum Eklendi
+ Experiment16
+  Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
+0  J5  12   0   0   0   0     3     68   80
+1  J1   0   6  10   0   0     1     89  105
+2  J3   0   0   0  90  50    10      2  142
+3  J4  36  32  32  16  28     4     38  182
+4  J2  15  20  50  10  40     5     73  208 
+
+
+df1 Eklendi
+ Experiment16
+Job  J5  J1  J3  J4  J2
+O1   12   0   0  36  15
+O2    0   6   0  32  20
+O3    0  10   0  32  50
+O4    0   0  90  16  10
+O5    0   0  50  28  40 
+
+
+df2 Eklendi
+ Experiment16
+Job    J5  J1  J3  J4  J2
+O1     12   0   0  36  15
+O2      0   6   0  32  20
+O3      0  10   0  32  50
+O4      0   0  90  16  10
+O5      0   0  50  28  40
+PROC    3   1  10   4   5
+SETUP  68  89   2  38  73 
+
+
+JobListe Eklendi
+ Experiment16
+0    J5
+1    J1
+2    J3
+3    J4
+4    J2
+Name: Job, dtype: object 
+
+
+Sýralama Eklendi
+ Experiment16
+{'J4': ['O4', 'O5', 'O2', 'O3', 'O1'], 'J3': ['O5', 'O4'], 'J5': ['O1'], 'J1': ['O2', 'O3'], 'J2': ['O4', 'O1', 'O2', 'O5', 'O3']} 
+
+
+orderToplamListesi Eklendi
+ Experiment16
+{'O4': 592, 'O5': 667, 'O1': 607, 'O2': 627, 'O3': 717} 
+
+
+Toplam Eklendi
+ Experiment16
+3210 
+
+
+Ýlk Okuma
+ Experiment17
+   Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
+0   17  J1   5   0   0   0   0     3     48
+1   17  J2   0   0   9   4   0     6     27
+2   17  J3   0   5   4   9   0     7     47
+3   17  J4   7   0   0   0   4     1      3
+4   17  J5   9   7   6   5   8     1     24 
+ Experiment17Experiment17
+Sum Eklendi
+ Experiment17
+  Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
+0  J4   7   0   0   0   4     1      3   14
+1  J5   9   7   6   5   8     1     24   59
+2  J1  15   0   0   0   0     3     48   63
+3  J2   0   0  54  24   0     6     27  105
+4  J3   0  35  28  63   0     7     47  173 
+
+
+df1 Eklendi
+ Experiment17
+Job  J4  J5  J1  J2  J3
+O1    7   9  15   0   0
+O2    0   7   0   0  35
+O3    0   6   0  54  28
+O4    0   5   0  24  63
+O5    4   8   0   0   0 
+
+
+df2 Eklendi
+ Experiment17
+Job    J4  J5  J1  J2  J3
+O1      7   9  15   0   0
+O2      0   7   0   0  35
+O3      0   6   0  54  28
+O4      0   5   0  24  63
+O5      4   8   0   0   0
+PROC    1   1   3   6   7
+SETUP   3  24  48  27  47 
+
+
+JobListe Eklendi
+ Experiment17
+0    J4
+1    J5
+2    J1
+3    J2
+4    J3
+Name: Job, dtype: object 
+
+
+Sýralama Eklendi
+ Experiment17
+{'J4': ['O5', 'O1'], 'J3': ['O3', 'O4', 'O2'], 'J5': ['O5', 'O1', 'O4', 'O3', 'O2'], 'J1': ['O1'], 'J2': ['O4', 'O3']} 
+
+
+orderToplamListesi Eklendi
+ Experiment17
+{'O4': 379, 'O5': 46, 'O1': 136, 'O2': 414, 'O3': 316} 
+
+
+Toplam Eklendi
+ Experiment17
+1291 
+
+
+Ýlk Okuma
+ Experiment18
+   Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
+0   18  J1  10   7   0   0   0     8    128
+1   18  J2   0   0   6   8  10     9     34
+2   18  J3   0   0   9   0   0    10    178
+3   18  J4   0   0   0   5   9     1    136
+4   18  J5   0   0   6   0   0     8     12 
+ Experiment18Experiment18
+Sum Eklendi
+ Experiment18
+  Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
+0  J5   0   0  48   0   0     8     12   60
+1  J4   0   0   0   5   9     1    136  150
+2  J2   0   0  54  72  90     9     34  250
+3  J1  80  56   0   0   0     8    128  264
+4  J3   0   0  90   0   0    10    178  268 
+
+
+df1 Eklendi
+ Experiment18
+Job  J5  J4  J2  J1  J3
+O1    0   0   0  80   0
+O2    0   0   0  56   0
+O3   48   0  54   0  90
+O4    0   5  72   0   0
+O5    0   9  90   0   0 
+
+
+df2 Eklendi
+ Experiment18
+Job    J5   J4  J2   J1   J3
+O1      0    0   0   80    0
+O2      0    0   0   56    0
+O3     48    0  54    0   90
+O4      0    5  72    0    0
+O5      0    9  90    0    0
+PROC    8    1   9    8   10
+SETUP  12  136  34  128  178 
+
+
+JobListe Eklendi
+ Experiment18
+0    J5
+1    J4
+2    J2
+3    J1
+4    J3
+Name: Job, dtype: object 
+
+
+Sýralama Eklendi
+ Experiment18
+{'J4': ['O4', 'O5'], 'J3': ['O3'], 'J5': ['O3'], 'J2': ['O4', 'O5', 'O3'], 'J1': ['O2', 'O1']} 
+
+
+orderToplamListesi Eklendi
+ Experiment18
+{'O4': 316, 'O5': 406, 'O1': 724, 'O2': 644, 'O3': 992} 
+
+
+Toplam Eklendi
+ Experiment18
+3082 
+
+
+Ýlk Okuma
+ Experiment19
+   Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
+0   19  J1   0   0   0   5  10     9     53
+1   19  J2   7   3  10   9   5     8     38
+2   19  J3   4   3   6  10   0     8     47
+3   19  J4  10   0   0   0   0     7     47
+4   19  J5   9   0   8  10   0     3     54 
+ Experiment19Experiment19
+Sum Eklendi
+ Experiment19
+  Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
+0  J4  70   0   0   0   0     7     47  117
+1  J5  27   0  24  30   0     3     54  135
+2  J1   0   0   0  45  90     9     53  188
+3  J3  32  24  48  80   0     8     47  231
+4  J2  56  24  80  72  40     8     38  310 
+
+
+df1 Eklendi
+ Experiment19
+Job  J4  J5  J1  J3  J2
+O1   70  27   0  32  56
+O2    0   0   0  24  24
+O3    0  24   0  48  80
+O4    0  30  45  80  72
+O5    0   0  90   0  40 
+
+
+df2 Eklendi
+ Experiment19
+Job    J4  J5  J1  J3  J2
+O1     70  27   0  32  56
+O2      0   0   0  24  24
+O3      0  24   0  48  80
+O4      0  30  45  80  72
+O5      0   0  90   0  40
+PROC    7   3   9   8   8
+SETUP  47  54  53  47  38 
+
+
+JobListe Eklendi
+ Experiment19
+0    J4
+1    J5
+2    J1
+3    J3
+4    J2
+Name: Job, dtype: object 
+
+
+Sýralama Eklendi
+ Experiment19
+{'J4': ['O1'], 'J3': ['O4', 'O2', 'O1', 'O3'], 'J5': ['O1', 'O3', 'O4'], 'J1': ['O4', 'O5'], 'J2': ['O2', 'O1', 'O4', 'O3', 'O5']} 
+
+
+orderToplamListesi Eklendi
+ Experiment19
+{'O4': 861, 'O5': 981, 'O1': 789, 'O2': 733, 'O3': 941} 
+
+
+Toplam Eklendi
+ Experiment19
+4305 
+
+
+Ýlk Okuma
+ Experiment2
+   Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
+0    2  J1   0   0   9   6   0     6     60
+1    2  J2   0   0   0   8   0     6     26
+2    2  J3   7   6   1   5  10     7     37
+3    2  J4   0   0   1   0   0     6     35
+4    2  J5   0   6   1   0   0     7     79 
+ Experiment2Experiment2
+Sum Eklendi
+ Experiment2
+  Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
+0  J4   0   0   6   0   0     6     35   41
+1  J2   0   0   0  48   0     6     26   74
+2  J5   0  42   7   0   0     7     79  128
+3  J1   0   0  54  36   0     6     60  150
+4  J3  49  42   7  35  70     7     37  240 
+
+
+df1 Eklendi
+ Experiment2
+Job  J4  J2  J5  J1  J3
+O1    0   0   0   0  49
+O2    0   0  42   0  42
+O3    6   0   7  54   7
+O4    0  48   0  36  35
+O5    0   0   0   0  70 
+
+
+df2 Eklendi
+ Experiment2
+Job    J4  J2  J5  J1  J3
+O1      0   0   0   0  49
+O2      0   0  42   0  42
+O3      6   0   7  54   7
+O4      0  48   0  36  35
+O5      0   0   0   0  70
+PROC    6   6   7   6   7
+SETUP  35  26  79  60  37 
+
+
+JobListe Eklendi
+ Experiment2
+0    J4
+1    J2
+2    J5
+3    J1
+4    J3
+Name: Job, dtype: object 
+
+
+Sýralama Eklendi
+ Experiment2
+{'J4': ['O3'], 'J3': ['O3', 'O4', 'O2', 'O1', 'O5'], 'J5': ['O3', 'O2'], 'J2': ['O4'], 'J1': ['O3', 'O4']} 
+
+
+orderToplamListesi Eklendi
+ Experiment2
+{'O4': 472, 'O5': 633, 'O1': 563, 'O2': 514, 'O3': 437} 
+
+
+Toplam Eklendi
+ Experiment2
+2619 
+
+
+Ýlk Okuma
+ Experiment20
+   Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
+0   20  J1   0   0  10   0   0     1    110
+1   20  J2   0   5   9   6   0     2     57
+2   20  J3   5   0   0   0   0     6      1
+3   20  J4   0   0   7   0   6     3     13
+4   20  J5   0   5   0   0   0     1    136 
+ Experiment20Experiment20
+Sum Eklendi
+ Experiment20
+  Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
+0  J3  30   0   0   0   0     6      1   31
+1  J4   0   0  21   0  18     3     13   52
+2  J2   0  10  18  12   0     2     57   97
+3  J1   0   0  10   0   0     1    110  120
+4  J5   0   5   0   0   0     1    136  141 
+
+
+df1 Eklendi
+ Experiment20
+Job  J3  J4  J2  J1  J5
+O1   30   0   0   0   0
+O2    0   0  10   0   5
+O3    0  21  18  10   0
+O4    0   0  12   0   0
+O5    0  18   0   0   0 
+
+
+df2 Eklendi
+ Experiment20
+Job    J3  J4  J2   J1   J5
+O1     30   0   0    0    0
+O2      0   0  10    0    5
+O3      0  21  18   10    0
+O4      0   0  12    0    0
+O5      0  18   0    0    0
+PROC    6   3   2    1    1
+SETUP   1  13  57  110  136 
+
+
+JobListe Eklendi
+ Experiment20
+0    J3
+1    J4
+2    J2
+3    J1
+4    J5
+Name: Job, dtype: object 
+
+
+Sýralama Eklendi
+ Experiment20
+{'J4': ['O5', 'O3'], 'J3': ['O1'], 'J5': ['O2'], 'J2': ['O3', 'O2', 'O4'], 'J1': ['O3']} 
+
+
+orderToplamListesi Eklendi
+ Experiment20
+{'O4': 180, 'O5': 62, 'O1': 31, 'O2': 441, 'O3': 300} 
+
+
+Toplam Eklendi
+ Experiment20
+1014 
+
+
+Ýlk Okuma
+ Experiment21
+   Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
+0   21  J1   3   2   4   7   8     7     93
+1   21  J2   0   0   7   9   0     6    110
+2   21  J3   0   0   9   0   0     1     26
+3   21  J4   0   8   0   0  10     9     65
+4   21  J5   4  10   0   8   4     3    111 
+ Experiment21Experiment21
+Sum Eklendi
+ Experiment21
+  Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
+0  J3   0   0   9   0   0     1     26   35
+1  J5  12  30   0  24  12     3    111  189
+2  J2   0   0  42  54   0     6    110  206
+3  J4   0  72   0   0  90     9     65  227
+4  J1  21  14  28  49  56     7     93  261 
+
+
+df1 Eklendi
+ Experiment21
+Job  J3  J5  J2  J4  J1
+O1    0  12   0   0  21
+O2    0  30   0  72  14
+O3    9   0  42   0  28
+O4    0  24  54   0  49
+O5    0  12   0  90  56 
+
+
+df2 Eklendi
+ Experiment21
+Job    J3   J5   J2  J4  J1
+O1      0   12    0   0  21
+O2      0   30    0  72  14
+O3      9    0   42   0  28
+O4      0   24   54   0  49
+O5      0   12    0  90  56
+PROC    1    3    6   9   7
+SETUP  26  111  110  65  93 
+
+
+JobListe Eklendi
+ Experiment21
+0    J3
+1    J5
+2    J2
+3    J4
+4    J1
+Name: Job, dtype: object 
+
+
+Sýralama Eklendi
+ Experiment21
+{'J4': ['O2', 'O5'], 'J3': ['O3'], 'J5': ['O1', 'O5', 'O4', 'O2'], 'J2': ['O4', 'O3'], 'J1': ['O2', 'O5', 'O1', 'O3', 'O4']} 
+
+
+orderToplamListesi Eklendi
+ Experiment21
+{'O4': 918, 'O5': 820, 'O1': 841, 'O2': 764, 'O3': 869} 
+
+
+Toplam Eklendi
+ Experiment21
+4212 
+
+
+Ýlk Okuma
+ Experiment22
+   Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
+0   22  J1   0   0   9   7   0     4     26
+1   22  J2   3   0   0   0   0     1     46
+2   22  J3   6   5  10   3   7     1     93
+3   22  J4   0   0   0   0   6     6     28
+4   22  J5  10   9   4   8   1     7     11 
+ Experiment22Experiment22
+Sum Eklendi
+ Experiment22
+  Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
+0  J2   3   0   0   0   0     1     46   49
+1  J4   0   0   0   0  36     6     28   64
+2  J1   0   0  36  28   0     4     26   90
+3  J3   6   5  10   3   7     1     93  124
+4  J5  70  63  28  56   7     7     11  235 
+
+
+df1 Eklendi
+ Experiment22
+Job  J2  J4  J1  J3  J5
+O1    3   0   0   6  70
+O2    0   0   0   5  63
+O3    0   0  36  10  28
+O4    0   0  28   3  56
+O5    0  36   0   7   7 
+
+
+df2 Eklendi
+ Experiment22
+Job    J2  J4  J1  J3  J5
+O1      3   0   0   6  70
+O2      0   0   0   5  63
+O3      0   0  36  10  28
+O4      0   0  28   3  56
+O5      0  36   0   7   7
+PROC    1   6   4   1   7
+SETUP  46  28  26  93  11 
+
+
+JobListe Eklendi
+ Experiment22
+0    J2
+1    J4
+2    J1
+3    J3
+4    J5
+Name: Job, dtype: object 
+
+
+Sýralama Eklendi
+ Experiment22
+{'J4': ['O5'], 'J3': ['O4', 'O3', 'O2', 'O1', 'O5'], 'J5': ['O5', 'O3', 'O4', 'O2', 'O1'], 'J2': ['O1'], 'J1': ['O4', 'O3']} 
+
+
+orderToplamListesi Eklendi
+ Experiment22
+{'O4': 429, 'O5': 345, 'O1': 562, 'O2': 492, 'O3': 373} 
+
+
+Toplam Eklendi
+ Experiment22
+2201 
+
+
+Ýlk Okuma
+ Experiment23
+   Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
+0   23  J1   7   0   0   0   0     3     76
+1   23  J2   0   4   0   0   0    10    144
+2   23  J3   3   6   2   7  10     3    128
+3   23  J4   0   8   7   1   9     3      3
+4   23  J5   5   6   8   6   4    10     87 
+ Experiment23Experiment23
+Sum Eklendi
+ Experiment23
+  Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
+0  J4   0  24  21   3  27     3      3   78
+1  J1  21   0   0   0   0     3     76   97
+2  J2   0  40   0   0   0    10    144  184
+3  J3   9  18   6  21  30     3    128  212
+4  J5  50  60  80  60  40    10     87  377 
+
+
+df1 Eklendi
+ Experiment23
+Job  J4  J1  J2  J3  J5
+O1    0  21   0   9  50
+O2   24   0  40  18  60
+O3   21   0   0   6  80
+O4    3   0   0  21  60
+O5   27   0   0  30  40 
+
+
+df2 Eklendi
+ Experiment23
+Job    J4  J1   J2   J3  J5
+O1      0  21    0    9  50
+O2     24   0   40   18  60
+O3     21   0    0    6  80
+O4      3   0    0   21  60
+O5     27   0    0   30  40
+PROC    3   3   10    3  10
+SETUP   3  76  144  128  87 
+
+
+JobListe Eklendi
+ Experiment23
+0    J4
+1    J1
+2    J2
+3    J3
+4    J5
+Name: Job, dtype: object 
+
+
+Sýralama Eklendi
+ Experiment23
+{'J4': ['O4', 'O3', 'O2', 'O5'], 'J3': ['O2', 'O3', 'O1', 'O4', 'O5'], 'J5': ['O5', 'O1', 'O2', 'O4', 'O3'], 'J1': ['O1'], 'J2': ['O2']} 
+
+
+orderToplamListesi Eklendi
+ Experiment23
+{'O4': 868, 'O5': 698, 'O1': 748, 'O2': 808, 'O3': 948} 
+
+
+Toplam Eklendi
+ Experiment23
+4070 
+
+
+Ýlk Okuma
+ Experiment24
+   Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
+0   24  J1   0   0   6   8   0     7     78
+1   24  J2   0   8  10   6   0     6     29
+2   24  J3   8   0   0   0   0     9    140
+3   24  J4   2   8   4   9   0     9     48
+4   24  J5   7  10   7   5   4     4    179 
+ Experiment24Experiment24
+Sum Eklendi
+ Experiment24
+  Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
+0  J2   0  48  60  36   0     6     29  173
+1  J1   0   0  42  56   0     7     78  176
+2  J3  72   0   0   0   0     9    140  212
+3  J4  18  72  36  81   0     9     48  255
+4  J5  28  40  28  20  16     4    179  311 
+
+
+df1 Eklendi
+ Experiment24
+Job  J2  J1  J3  J4  J5
+O1    0   0  72  18  28
+O2   48   0   0  72  40
+O3   60  42   0  36  28
+O4   36  56   0  81  20
+O5    0   0   0   0  16 
+
+
+df2 Eklendi
+ Experiment24
+Job    J2  J1   J3  J4   J5
+O1      0   0   72  18   28
+O2     48   0    0  72   40
+O3     60  42    0  36   28
+O4     36  56    0  81   20
+O5      0   0    0   0   16
+PROC    6   7    9   9    4
+SETUP  29  78  140  48  179 
+
+
+JobListe Eklendi
+ Experiment24
+0    J2
+1    J1
+2    J3
+3    J4
+4    J5
+Name: Job, dtype: object 
+
+
+Sýralama Eklendi
+ Experiment24
+{'J1': ['O3', 'O4'], 'J3': ['O1'], 'J5': ['O4', 'O1', 'O3', 'O2', 'O5'], 'J2': ['O4', 'O2', 'O3'], 'J4': ['O1', 'O3', 'O2', 'O4']} 
+
+
+orderToplamListesi Eklendi
+ Experiment24
+{'O4': 1015, 'O5': 1127, 'O1': 1043, 'O2': 1111, 'O3': 1071} 
+
+
+Toplam Eklendi
+ Experiment24
+5367 
+
+
+Ýlk Okuma
+ Experiment25
+   Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
+0   25  J1   0   0  10   0   0     8      2
+1   25  J2   8   7   0   0   0     8     12
+2   25  J3   0   0   5   2   9     7     22
+3   25  J4   8   0   4   3   0     7     45
+4   25  J5   0   5   7   1  10     3     23 
+ Experiment25Experiment25
+Sum Eklendi
+ Experiment25
+  Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
+0  J1   0   0  80   0   0     8      2   82
+1  J5   0  15  21   3  30     3     23   92
+2  J2  64  56   0   0   0     8     12  132
+3  J3   0   0  35  14  63     7     22  134
+4  J4  56   0  28  21   0     7     45  150 
+
+
+df1 Eklendi
+ Experiment25
+Job  J1  J5  J2  J3  J4
+O1    0   0  64   0  56
+O2    0  15  56   0   0
+O3   80  21   0  35  28
+O4    0   3   0  14  21
+O5    0  30   0  63   0 
+
+
+df2 Eklendi
+ Experiment25
+Job    J1  J5  J2  J3  J4
+O1      0   0  64   0  56
+O2      0  15  56   0   0
+O3     80  21   0  35  28
+O4      0   3   0  14  21
+O5      0  30   0  63   0
+PROC    8   3   8   7   7
+SETUP   2  23  12  22  45 
+
+
+JobListe Eklendi
+ Experiment25
+0    J1
+1    J5
+2    J2
+3    J3
+4    J4
+Name: Job, dtype: object 
+
+
+Sýralama Eklendi
+ Experiment25
+{'J2': ['O2', 'O1'], 'J3': ['O4', 'O3', 'O5'], 'J5': ['O3', 'O4', 'O2', 'O5'], 'J1': ['O3'], 'J4': ['O4', 'O3', 'O1']} 
+
+
+orderToplamListesi Eklendi
+ Experiment25
+{'O4': 506, 'O5': 440, 'O1': 590, 'O2': 242, 'O3': 534} 
+
+
+Toplam Eklendi
+ Experiment25
+2312 
+
+
+Ýlk Okuma
+ Experiment3
+   Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
+0    3  J1   0   0   4   5   0     1     18
+1    3  J2   0   4   7   0   0     8      8
+2    3  J3   7   5   6   5   1    10     44
+3    3  J4  10   0   0   0   0     2     44
+4    3  J5   0   6   4   5   0     5      6 
+ Experiment3Experiment3
+Sum Eklendi
+ Experiment3
+  Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
+0  J1   0   0   4   5   0     1     18   27
+1  J4  20   0   0   0   0     2     44   64
+2  J5   0  30  20  25   0     5      6   81
+3  J2   0  32  56   0   0     8      8   96
+4  J3  70  50  60  50  10    10     44  284 
+
+
+df1 Eklendi
+ Experiment3
+Job  J1  J4  J5  J2  J3
+O1    0  20   0   0  70
+O2    0   0  30  32  50
+O3    4   0  20  56  60
+O4    5   0  25   0  50
+O5    0   0   0   0  10 
+
+
+df2 Eklendi
+ Experiment3
+Job    J1  J4  J5  J2  J3
+O1      0  20   0   0  70
+O2      0   0  30  32  50
+O3      4   0  20  56  60
+O4      5   0  25   0  50
+O5      0   0   0   0  10
+PROC    1   2   5   8  10
+SETUP  18  44   6   8  44 
+
+
+JobListe Eklendi
+ Experiment3
+0    J1
+1    J4
+2    J5
+3    J2
+4    J3
+Name: Job, dtype: object 
+
+
+Sýralama Eklendi
+ Experiment3
+{'J4': ['O1'], 'J3': ['O2', 'O3', 'O5', 'O4', 'O1'], 'J5': ['O3', 'O4', 'O2'], 'J1': ['O3', 'O4'], 'J2': ['O2', 'O3']} 
+
+
+orderToplamListesi Eklendi
+ Experiment3
+{'O4': 482, 'O5': 432, 'O1': 552, 'O2': 362, 'O3': 422} 
+
+
+Toplam Eklendi
+ Experiment3
+2250 
+
+
+Ýlk Okuma
+ Experiment4
+   Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
+0    4  J1   0   0   9  10   0     2     94
+1    4  J2  10   0   0   0   0     8     65
+2    4  J3   0   0   0   0   8     3     60
+3    4  J4   0   3   6   0   0     9     97
+4    4  J5   2   8   4   9   0     1     65 
+ Experiment4Experiment4
+Sum Eklendi
+ Experiment4
+  Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
+0  J3   0   0   0   0  24     3     60   84
+1  J5   2   8   4   9   0     1     65   88
+2  J1   0   0  18  20   0     2     94  132
+3  J2  80   0   0   0   0     8     65  145
+4  J4   0  27  54   0   0     9     97  178 
+
+
+df1 Eklendi
+ Experiment4
+Job  J3  J5  J1  J2  J4
+O1    0   2   0  80   0
+O2    0   8   0   0  27
+O3    0   4  18   0  54
+O4    0   9  20   0   0
+O5   24   0   0   0   0 
+
+
+df2 Eklendi
+ Experiment4
+Job    J3  J5  J1  J2  J4
+O1      0   2   0  80   0
+O2      0   8   0   0  27
+O3      0   4  18   0  54
+O4      0   9  20   0   0
+O5     24   0   0   0   0
+PROC    3   1   2   8   9
+SETUP  60  65  94  65  97 
+
+
+JobListe Eklendi
+ Experiment4
+0    J3
+1    J5
+2    J1
+3    J2
+4    J4
+Name: Job, dtype: object 
+
+
+Sýralama Eklendi
+ Experiment4
+{'J2': ['O1'], 'J3': ['O5'], 'J5': ['O1', 'O3', 'O2', 'O4'], 'J1': ['O3', 'O4'], 'J4': ['O2', 'O3']} 
+
+
+orderToplamListesi Eklendi
+ Experiment4
+{'O4': 304, 'O5': 84, 'O1': 449, 'O2': 573, 'O3': 627} 
+
+
+Toplam Eklendi
+ Experiment4
+2037 
+
+
+Ýlk Okuma
+ Experiment5
+   Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
+0    5  J1   4   3   2   9   9     1    180
+1    5  J2   0   2   7  10   0     7     75
+2    5  J3   0   8   7   0   0     1     70
+3    5  J4   1   8   8   9   6     2    144
+4    5  J5   0   0   0   5   0     1    154 
+ Experiment5Experiment5
+Sum Eklendi
+ Experiment5
+  Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
+0  J3   0   8   7   0   0     1     70   85
+1  J5   0   0   0   5   0     1    154  159
+2  J1   4   3   2   9   9     1    180  207
+3  J2   0  14  49  70   0     7     75  208
+4  J4   2  16  16  18  12     2    144  208 
+
+
+df1 Eklendi
+ Experiment5
+Job  J3  J5  J1  J2  J4
+O1    0   0   4   0   2
+O2    8   0   3  14  16
+O3    7   0   2  49  16
+O4    0   5   9  70  18
+O5    0   0   9   0  12 
+
+
+df2 Eklendi
+ Experiment5
+Job    J3   J5   J1  J2   J4
+O1      0    0    4   0    2
+O2      8    0    3  14   16
+O3      7    0    2  49   16
+O4      0    5    9  70   18
+O5      0    0    9   0   12
+PROC    1    1    1   7    2
+SETUP  70  154  180  75  144 
+
+
+JobListe Eklendi
+ Experiment5
+0    J3
+1    J5
+2    J1
+3    J2
+4    J4
+Name: Job, dtype: object 
+
+
+Sýralama Eklendi
+ Experiment5
+{'J2': ['O2', 'O3', 'O4'], 'J3': ['O3', 'O2'], 'J5': ['O4'], 'J1': ['O4', 'O3', 'O2', 'O1', 'O5'], 'J4': ['O2', 'O3', 'O4', 'O1', 'O5']} 
+
+
+orderToplamListesi Eklendi
+ Experiment5
+{'O4': 853, 'O5': 867, 'O1': 855, 'O2': 819, 'O3': 835} 
+
+
+Toplam Eklendi
+ Experiment5
+4229 
+
+
+Ýlk Okuma
+ Experiment6
+   Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
+0    6  J1   9   3   1   6   3     4     41
+1    6  J2   0   0   0   5   0     6     48
+2    6  J3   0   0   3   8   7     4      5
+3    6  J4   0   6   5   0   0     6     40
+4    6  J5   0   0   0   5   4     8     47 
+ Experiment6Experiment6
+Sum Eklendi
+ Experiment6
+  Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
+0  J3   0   0  12  32  28     4      5   77
+1  J2   0   0   0  30   0     6     48   78
+2  J4   0  36  30   0   0     6     40  106
+3  J5   0   0   0  40  32     8     47  119
+4  J1  36  12   4  24  12     4     41  129 
+
+
+df1 Eklendi
+ Experiment6
+Job  J3  J2  J4  J5  J1
+O1    0   0   0   0  36
+O2    0   0  36   0  12
+O3   12   0  30   0   4
+O4   32  30   0  40  24
+O5   28   0   0  32  12 
+
+
+df2 Eklendi
+ Experiment6
+Job    J3  J2  J4  J5  J1
+O1      0   0   0   0  36
+O2      0   0  36   0  12
+O3     12   0  30   0   4
+O4     32  30   0  40  24
+O5     28   0   0  32  12
+PROC    4   6   6   8   4
+SETUP   5  48  40  47  41 
+
+
+JobListe Eklendi
+ Experiment6
+0    J3
+1    J2
+2    J4
+3    J5
+4    J1
+Name: Job, dtype: object 
+
+
+Sýralama Eklendi
+ Experiment6
+{'J4': ['O3', 'O2'], 'J3': ['O3', 'O5', 'O4'], 'J5': ['O5', 'O4'], 'J2': ['O4'], 'J1': ['O5', 'O4', 'O3', 'O2', 'O1']} 
+
+
+orderToplamListesi Eklendi
+ Experiment6
+{'O4': 457, 'O5': 433, 'O1': 509, 'O2': 473, 'O3': 461} 
+
+
+Toplam Eklendi
+ Experiment6
+2333 
+
+
+Ýlk Okuma
+ Experiment7
+   Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
+0    7  J1   1   5   0   4   8     9     35
+1    7  J2   5   5   4  10   4     6     49
+2    7  J3   0   5   6   9   0     7      7
+3    7  J4   7   6   0   0   0     6     18
+4    7  J5   0   0  10   8   5     3      0 
+ Experiment7Experiment7
+Sum Eklendi
+ Experiment7
+  Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
+0  J5   0   0  30  24  15     3      0   69
+1  J4  42  36   0   0   0     6     18   96
+2  J3   0  35  42  63   0     7      7  147
+3  J1   9  45   0  36  72     9     35  197
+4  J2  30  30  24  60  24     6     49  217 
+
+
+df1 Eklendi
+ Experiment7
+Job  J5  J4  J3  J1  J2
+O1    0  42   0   9  30
+O2    0  36  35  45  30
+O3   30   0  42   0  24
+O4   24   0  63  36  60
+O5   15   0   0  72  24 
+
+
+df2 Eklendi
+ Experiment7
+Job    J5  J4  J3  J1  J2
+O1      0  42   0   9  30
+O2      0  36  35  45  30
+O3     30   0  42   0  24
+O4     24   0  63  36  60
+O5     15   0   0  72  24
+PROC    3   6   7   9   6
+SETUP   0  18   7  35  49 
+
+
+JobListe Eklendi
+ Experiment7
+0    J5
+1    J4
+2    J3
+3    J1
+4    J2
+Name: Job, dtype: object 
+
+
+Sýralama Eklendi
+ Experiment7
+{'J4': ['O2', 'O1'], 'J3': ['O2', 'O3', 'O4'], 'J5': ['O5', 'O4', 'O3'], 'J1': ['O4', 'O2', 'O1', 'O5'], 'J2': ['O5', 'O1', 'O2', 'O4', 'O3']} 
+
+
+orderToplamListesi Eklendi
+ Experiment7
+{'O4': 702, 'O5': 582, 'O1': 612, 'O2': 642, 'O3': 726} 
+
+
+Toplam Eklendi
+ Experiment7
+3264 
+
+
+Ýlk Okuma
+ Experiment8
+   Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
+0    8  J1   0   0   9   0   0     2     31
+1    8  J2   0   4   8   0   0     9     12
+2    8  J3   3   7   0   8   0     6     37
+3    8  J4   0   0   0   0   2     5    199
+4    8  J5   0   0   0   0   7     3    129 
+ Experiment8Experiment8
+Sum Eklendi
+ Experiment8
+  Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
+0  J1   0   0  18   0   0     2     31   49
+1  J2   0  36  72   0   0     9     12  120
+2  J3  18  42   0  48   0     6     37  145
+3  J5   0   0   0   0  21     3    129  150
+4  J4   0   0   0   0  10     5    199  209 
+
+
+df1 Eklendi
+ Experiment8
+Job  J1  J2  J3  J5  J4
+O1    0   0  18   0   0
+O2    0  36  42   0   0
+O3   18  72   0   0   0
+O4    0   0  48   0   0
+O5    0   0   0  21  10 
+
+
+df2 Eklendi
+ Experiment8
+Job    J1  J2  J3   J5   J4
+O1      0   0  18    0    0
+O2      0  36  42    0    0
+O3     18  72   0    0    0
+O4      0   0  48    0    0
+O5      0   0   0   21   10
+PROC    2   9   6    3    5
+SETUP  31  12  37  129  199 
+
+
+JobListe Eklendi
+ Experiment8
+0    J1
+1    J2
+2    J3
+3    J5
+4    J4
+Name: Job, dtype: object 
+
+
+Sýralama Eklendi
+ Experiment8
+{'J2': ['O3', 'O2'], 'J3': ['O2', 'O1', 'O4'], 'J5': ['O5'], 'J1': ['O3'], 'J4': ['O5']} 
+
+
+orderToplamListesi Eklendi
+ Experiment8
+{'O4': 314, 'O5': 673, 'O1': 266, 'O2': 248, 'O3': 133} 
+
+
+Toplam Eklendi
+ Experiment8
+1634 
+
+
+Ýlk Okuma
+ Experiment9
+   Exp Job  O1  O2  O3  O4  O5  PROC  SETUP
+0    9  J1   9   5   6   9   5     2    124
+1    9  J2   0  10  10   9   7     3     67
+2    9  J3   3   4   2   1   0     1     72
+3    9  J4  10   3   0   5   8     6    129
+4    9  J5   0   1   9   2   7     7     56 
+ Experiment9Experiment9
+Sum Eklendi
+ Experiment9
+  Job  O1  O2  O3  O4  O5  PROC  SETUP  SUM
+0  J3   3   4   2   1   0     1     72   82
+1  J2   0  30  30  27  21     3     67  175
+2  J5   0   7  63  14  49     7     56  189
+3  J1  18  10  12  18  10     2    124  192
+4  J4  60  18   0  30  48     6    129  285 
+
+
+df1 Eklendi
+ Experiment9
+Job  J3  J2  J5  J1  J4
+O1    3   0   0  18  60
+O2    4  30   7  10  18
+O3    2  30  63  12   0
+O4    1  27  14  18  30
+O5    0  21  49  10  48 
+
+
+df2 Eklendi
+ Experiment9
+Job    J3  J2  J5   J1   J4
+O1      3   0   0   18   60
+O2      4  30   7   10   18
+O3      2  30  63   12    0
+O4      1  27  14   18   30
+O5      0  21  49   10   48
+PROC    1   3   7    2    6
+SETUP  72  67  56  124  129 
+
+
+JobListe Eklendi
+ Experiment9
+0    J3
+1    J2
+2    J5
+3    J1
+4    J4
+Name: Job, dtype: object 
+
+
+Sýralama Eklendi
+ Experiment9
+{'J1': ['O2', 'O5', 'O3', 'O4', 'O1'], 'J3': ['O4', 'O3', 'O1', 'O2'], 'J5': ['O2', 'O4', 'O5', 'O3'], 'J2': ['O4', 'O3', 'O2', 'O5'], 'J4': ['O2', 'O4', 'O5', 'O1']} 
+
+
+orderToplamListesi Eklendi
+ Experiment9
+{'O4': 815, 'O5': 863, 'O1': 923, 'O2': 785, 'O3': 602} 
+
+
+Toplam Eklendi
+ Experiment9
+3988 
+
+
