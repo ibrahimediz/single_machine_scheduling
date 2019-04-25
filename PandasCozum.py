@@ -160,14 +160,14 @@ def OkuBakalım(is_adi,Folderadres,txt_adres,csv_adres,Job,Order):
         
 table_list = []
 new_table_list = []
-for filename in os.listdir(r"E:\Projelerim\single_machine_scheduling\DENEME CSV SETLER\DENEME CSV SETLER\I=20, J=20"):
+for filename in os.listdir(r"E:\Projelerim\single_machine_scheduling\DENEME CSV SETLER\DENEME CSV SETLER\I=20, J=15"):
     if filename.endswith('.csv'):
         # table_list.append(pd.read_csv(filename,sep="|"))
         new_table_list.append(filename)
         # print(table_list)
         # print(new_table_list)
 for item in new_table_list:
-    OkuBakalım(item.split(".")[0],r"E:\Projelerim\single_machine_scheduling\DENEME CSV SETLER\DENEME CSV SETLER\I=20, J=20",r"\I20_J20.txt",item,Job=20,Order=20)
+    OkuBakalım(item.split(".")[0],r"E:\Projelerim\single_machine_scheduling\DENEME CSV SETLER\DENEME CSV SETLER\I=20, J=15",r"\I20_J15.txt",item,Job=15,Order=20)
 
 # toplam = 0
 # orderToplamListesi = {}
