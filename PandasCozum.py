@@ -26,9 +26,9 @@ def DosyaOlustur(adres):
 
 
 def OkuBakalım(is_adi,Folderadres,txt_adres,csv_adres,Job,Order,TopSure,DosyaSure):
-    start = time.time()
+    start = time.perf_counter()
     def gecenSure(start):
-        return time.time()-start
+        return time.perf_counter()-start
     sutun = ["Job"] 
     for i in range (1,Order+1):
         sutun.append("O"+str(i))
@@ -39,6 +39,10 @@ def OkuBakalım(is_adi,Folderadres,txt_adres,csv_adres,Job,Order,TopSure,DosyaSu
     
     print("İlk Okuma\n",is_adi,gecenSure(start),file = open(adres,"a"))
     print(data,"\n",is_adi,file = open(adres,"a"))
+
+
+    print("İlk Okuma\n",is_adi,gecenSure(start))
+    print(data,"\n",is_adi)
     
     sutun.append("SUM")
     df = pd.DataFrame(columns=sutun)
@@ -56,7 +60,8 @@ def OkuBakalım(is_adi,Folderadres,txt_adres,csv_adres,Job,Order,TopSure,DosyaSu
     print("Sum Eklendi\n",is_adi,file = open(adres,"a"))
     print(dfO,"\n"*2,file = open(adres,"a"))
 
-
+    print("Sum Eklendi\n",is_adi)
+    print(dfO,"\n"*2)
 
     df1 = dfO.iloc[:,1:Order+1].T
     df1.columns=dfO.iloc[:,0]
@@ -64,6 +69,8 @@ def OkuBakalım(is_adi,Folderadres,txt_adres,csv_adres,Job,Order,TopSure,DosyaSu
     print("df1 Eklendi\n",is_adi,file = open(adres,"a"))
     print(df1,"\n"*2,file = open(adres,"a"))
 
+    print("df1 Eklendi\n",is_adi)
+    print(df1,"\n"*2)
 
     df2 = dfO.iloc[:,1:Order+3].T
     df2.columns=dfO.iloc[:,0]
@@ -71,7 +78,8 @@ def OkuBakalım(is_adi,Folderadres,txt_adres,csv_adres,Job,Order,TopSure,DosyaSu
     print("df2 Eklendi\n",is_adi,file = open(adres,"a"))
     print(df2,"\n"*2,file = open(adres,"a"))
 
-
+    print("df2 Eklendi\n",is_adi)
+    print(df2,"\n"*2)
 
     siralama = {}
     jobListe = dfO.iloc[:,0]
@@ -93,6 +101,10 @@ def OkuBakalım(is_adi,Folderadres,txt_adres,csv_adres,Job,Order,TopSure,DosyaSu
     print(jobListe,"\n"*2,file = open(adres,"a"))
 
 
+    print("JobListe Eklendi\n",is_adi)
+    print(jobListe,"\n"*2)
+    
+
     def JobYukSirala(dfData,Liste,Job):
         # print(dfData,Liste,Job)
         listeOrderSure = []
@@ -103,6 +115,8 @@ def OkuBakalım(is_adi,Folderadres,txt_adres,csv_adres,Job,Order,TopSure,DosyaSu
         dataFrame = dataFrame.sort_values(by="Value",ascending=1)
         # print(Job,list(dataFrame.loc[:,"Order"]))
         return list(dataFrame.loc[:,"Order"])
+
+
 
 
     for i in range(len(jobListe),0,-1):
@@ -128,7 +142,29 @@ def OkuBakalım(is_adi,Folderadres,txt_adres,csv_adres,Job,Order,TopSure,DosyaSu
     print(siralama,"\n"*2,file = open(adres,"a"))
 
 
+    print("Sıralama Eklendi\n",is_adi)
+    print(siralama,"\n"*2)
 
+    def tekrarsizlariBul(job,order):
+        tekrar = False
+        for i in range(0,len(jobListe)):
+            if job != jobListe[i]:
+                if item in siralama[jobListe[i]]:
+                    if order in item:
+                        tekrar = True
+        return tekrar
+
+    for i in range(0,len(jobListe)):
+        listeYalnizOrder = siralama[jobListe[i]]
+        for item in listeYalnizOrder:
+           if not tekrarsizlariBul(jobListe[i],item):
+               listeYalnizOrder.remove(item)
+               listeYalnizOrder.insert(0,item)
+
+    print(siralama)        
+            
+            
+    
 
     toplam = 0
     orderToplamListesi = {}
@@ -151,7 +187,9 @@ def OkuBakalım(is_adi,Folderadres,txt_adres,csv_adres,Job,Order,TopSure,DosyaSu
     print("orderToplamListesi Eklendi\n",is_adi,file = open(adres,"a"))
     print(orderToplamListesi,"\n"*2,file = open(adres,"a"))
 
-            
+    print("orderToplamListesi Eklendi\n",is_adi)
+    print(orderToplamListesi,"\n"*2)
+
 
     sayi = 0
     for i in orderToplamListesi.values():
@@ -163,19 +201,24 @@ def OkuBakalım(is_adi,Folderadres,txt_adres,csv_adres,Job,Order,TopSure,DosyaSu
     print("Dosyada Geçen Süre :",gecenSure(DosyaSure),"sn","\n"*2,file = open(adres,"a"))
     print("Toplamda Geçen Süre :",gecenSure(TopSure),"sn","\n"*2,file = open(adres,"a"))    
     print("Toplam",sayi,"Geçen Süre :",gecenSure(start),"sn")
+
+    
         
 table_list = []
 
-ToplamSure = time.time()
+ToplamSure = time.perf_counter()
+DosyaSure = time.perf_counter()
 for ord in range(5,25,5):
     for job in range(5,25,5):
         new_table_list = []
         for filename in os.listdir(r"E:\Projelerim\single_machine_scheduling\DENEME CSV SETLER\DENEME CSV SETLER\I={}, J={}".format(ord,job)):
             if filename.endswith('.csv'):
                 new_table_list.append(filename)
+        new_table_list.sort()
         for item in new_table_list:
-            DosyaSure = time.time()
+            DosyaSure = time.perf_counter()
             OkuBakalım(item.split(".")[0],r"E:\Projelerim\single_machine_scheduling\DENEME CSV SETLER\DENEME CSV SETLER\I={}, J={}".format(ord,job),r"\I{}_J{}.txt".format(ord,job),item,Job=job,Order=ord,TopSure=ToplamSure,DosyaSure=DosyaSure)
+# OkuBakalım("Exp_35",r"E:\Projelerim\single_machine_scheduling\DENEME CSV SETLER\DENEME CSV SETLER\I=5, J=5",r"\deneme.txt",r"Experiment4.csv",Job=5,Order=5,TopSure=ToplamSure,DosyaSure=DosyaSure)
 
 # toplam = 0
 # orderToplamListesi = {}
