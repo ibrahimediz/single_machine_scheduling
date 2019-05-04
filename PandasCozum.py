@@ -218,45 +218,7 @@ for ord in range(5,25,5):
         for item in new_table_list:
             DosyaSure = time.perf_counter()
             OkuBakalım(item.split(".")[0],r"E:\Projelerim\single_machine_scheduling\DENEME CSV SETLER\DENEME CSV SETLER\I={}, J={}".format(ord,job),r"\I{}_J{}.txt".format(ord,job),item,Job=job,Order=ord,TopSure=ToplamSure,DosyaSure=DosyaSure)
-# OkuBakalım("Exp_35",r"E:\Projelerim\single_machine_scheduling\DENEME CSV SETLER\DENEME CSV SETLER\I=5, J=5",r"\deneme.txt",r"Experiment4.csv",Job=5,Order=5,TopSure=ToplamSure,DosyaSure=DosyaSure)
 
-# toplam = 0
-# orderToplamListesi = {}
-# for order in range(1,6):
-#     orderToplamListesi.update({"O"+str(order):0})
-
-# def ilerideVarmi(order,Job):
-#     global jobListe
-#     global siralama
-#     liste = list(jobListe)
-#     if liste.index(Job)+1  == len(liste):
-#         return False
-#     else:
-#         sayi = liste.index(Job)
-#         sinama  = False
-#         for i in range(sayi,len(liste)):
-#             for item in siralama[liste[i]] :
-#                 if order in item:
-#                     sinama = True
-#         return sinama
-
-
-
-# # print(list(jobListe))
-# for item in jobListe:
-#     toplam += df2.loc["SETUP",item]
-#     for i in siralama[item]:
-#         print(item,i,ilerideVarmi(i,item))
-#         toplam += df2.loc[i,item]
-#         if ilerideVarmi(i,item):            
-#             orderToplamListesi[i] = toplam
-#     print("Toplam",toplam)
-# print(orderToplamListesi)
-# sayi = 0
-# for i in orderToplamListesi.values():
-#     sayi += i
-
-# print("Toplam",sayi)
 
 
                     
