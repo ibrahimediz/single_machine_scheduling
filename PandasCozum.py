@@ -119,24 +119,24 @@ def OkuBakalım(is_adi,Folderadres,txt_adres,csv_adres,Job,Order,TopSure,DosyaSu
 
 
 
-    for i in range(len(jobListe),0,-1):
-        if not i - 1 == 0:
-            listeA = siralama[jobListe[i-1]]
-            listeB = siralama[jobListe[i-2]]
-            liste = []
-            for a in listeB:
-                for b in listeA:
-                    if a==b:
-                        liste.append(a)
-            if len(liste)>0:
-                liste = JobYukSirala(df2,listeA,jobListe[i-1])
-                print("Fark Listesi-",jobListe[i-1],liste)
-            if len(liste)>0:      
-                for c in reversed(liste):
-                    listeA.remove(c)
-                    listeA.insert(0,c)
+    # for i in range(len(jobListe),0,-1):
+    #     if not i - 1 == 0:
+    #         listeA = siralama[jobListe[i-1]]
+    #         listeB = siralama[jobListe[i-2]]
+    #         liste = []
+    #         for a in listeB:
+    #             for b in listeA:
+    #                 if a==b:
+    #                     liste.append(a)
+    #         if len(liste)>0:
+    #             liste = JobYukSirala(df2,listeA,jobListe[i-1])
+    #             print("Fark Listesi-",jobListe[i-1],liste)
+    #         if len(liste)>0:      
+    #             for c in reversed(liste):
+    #                 listeA.remove(c)
+    #                 listeA.insert(0,c)
                 
-                siralama[jobListe[i-1]] = listeA
+    #             siralama[jobListe[i-1]] = listeA
 
     print("Sıralama Eklendi\n",is_adi,file = open(adres,"a"))
     print(siralama,"\n"*2,file = open(adres,"a"))
@@ -174,7 +174,7 @@ def OkuBakalım(is_adi,Folderadres,txt_adres,csv_adres,Job,Order,TopSure,DosyaSu
     def toplama(Order,Value):
         orderToplamListesi[Order]=Value
         
-
+    
 
 
     for item in jobListe:
@@ -206,18 +206,24 @@ def OkuBakalım(is_adi,Folderadres,txt_adres,csv_adres,Job,Order,TopSure,DosyaSu
         
 table_list = []
 
+def dosyaisimleri(sira):
+    liste = []
+    for i in range((sira*25)+1,(sira*25)+25):
+        liste.append("Experiment"+str(i)+".csv")
+    return liste
+
+
+
 ToplamSure = time.perf_counter()
 DosyaSure = time.perf_counter()
+sira = 0
 for ord in range(5,25,5):
     for job in range(5,25,5):
-        new_table_list = []
-        for filename in os.listdir(r"E:\Projelerim\single_machine_scheduling\DENEME CSV SETLER\DENEME CSV SETLER\I={}, J={}".format(ord,job)):
-            if filename.endswith('.csv'):
-                new_table_list.append(filename)
-        new_table_list.sort()
+        new_table_list = dosyaisimleri(sira)
         for item in new_table_list:
             DosyaSure = time.perf_counter()
             OkuBakalım(item.split(".")[0],r"E:\Projelerim\single_machine_scheduling\DENEME CSV SETLER\DENEME CSV SETLER\I={}, J={}".format(ord,job),r"\I{}_J{}.txt".format(ord,job),item,Job=job,Order=ord,TopSure=ToplamSure,DosyaSure=DosyaSure)
+        sira += 1        
 # OkuBakalım("Exp_35",r"E:\Projelerim\single_machine_scheduling\DENEME CSV SETLER\DENEME CSV SETLER\I=5, J=5",r"\deneme.txt",r"Experiment4.csv",Job=5,Order=5,TopSure=ToplamSure,DosyaSure=DosyaSure)
 
 # toplam = 0
