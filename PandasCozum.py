@@ -5,19 +5,18 @@
 
 # print(dosya)
 # input()
-
+__author__ = "ibrahimediz"
 import pandas as pd
-import numpy as np
-import os
 import time
 def DosyaOlustur(adres):
     import os
+    file = open("temp.txt", "w")
     try:
-        file=None
+
         if not os.path.exists(adres):
-            file = open(adres,"w")
-        else :
-            file = open(adres,"r+")
+            file = open(adres, "w")
+        else:
+            file = open(adres, "w")
     except Exception as Hata:
         file.write(str(Hata))
     finally:
@@ -25,7 +24,7 @@ def DosyaOlustur(adres):
 
 
 
-def OkuBakalım(is_adi,Folderadres,txt_adres,csv_adres,Job,Order,TopSure,DosyaSure):
+def OkuBakalım(is_adi,Folderadres,txt_adres,csv_adres,Job,Order,TopSure,DosyaSure,wSetup):
     start = time.perf_counter()
     def gecenSure(start):
         return time.perf_counter()-start
@@ -35,7 +34,7 @@ def OkuBakalım(is_adi,Folderadres,txt_adres,csv_adres,Job,Order,TopSure,DosyaSu
     sutun += ["PROC","SETUP"]
     adres = Folderadres+"\\"+txt_adres
     data =  pd.read_csv(Folderadres+"\\"+csv_adres,delimiter=";")
-    DosyaOlustur(Folderadres+"\\"+txt_adres)
+    
     
     print("İlk Okuma\n",is_adi,gecenSure(start),file = open(adres,"a"))
     print(data,"\n",is_adi,file = open(adres,"a"))
@@ -47,7 +46,10 @@ def OkuBakalım(is_adi,Folderadres,txt_adres,csv_adres,Job,Order,TopSure,DosyaSu
     sutun.append("SUM")
     df = pd.DataFrame(columns=sutun)
     df.Job = data.Job
-    df.SETUP = data.SETUP
+    if wSetup == 0:
+        df.SETUP = 0
+    else:
+        df.SETUP = data.SETUP
     df.PROC=data.PROC
     df.iloc[:,1:Order+1] = data.iloc[:,2:Order+2]
     for i in range(1,Job+1):
@@ -146,22 +148,56 @@ def OkuBakalım(is_adi,Folderadres,txt_adres,csv_adres,Job,Order,TopSure,DosyaSu
     print(siralama,"\n"*2)
 
     def tekrarsizlariBul(job,order):
+        if is_adi == "Experiment4" and job == "J4":
+            print("x")
+        tekrar = False
+        for i in range(0,  len(jobListe)):
+            if job != jobListe[i] and list(jobListe).index(job) < list(jobListe).index(jobListe[i]):
+                if item in siralama[jobListe[i]]:
+                    if order in item:
+                        tekrar = True
+        return tekrar
+    
+    def tekrarsizlariBulTum(job,order):
         tekrar = False
         for i in range(0,len(jobListe)):
             if job != jobListe[i]:
                 if item in siralama[jobListe[i]]:
                     if order in item:
-                        tekrar = True
+                       return True
         return tekrar
 
-    for i in range(0,len(jobListe)):
-        listeYalnizOrder = siralama[jobListe[i]]
-        for item in listeYalnizOrder:
-           if not tekrarsizlariBul(jobListe[i],item):
-               listeYalnizOrder.remove(item)
-               listeYalnizOrder.insert(0,item)
+      
+                            
 
-    print(siralama)        
+
+    sozlukTekrar =  {}
+    for i in range(0,len(jobListe)):
+        listeYalnizOrder = []
+        for item in siralama[jobListe[i]]:
+            if not tekrarsizlariBul(jobListe[i],item) and list(jobListe).index(jobListe[i]) != len(jobListe) -1:
+                siralama[jobListe[i]].remove(item)
+                siralama[jobListe[i]].insert(0,item)
+                pass
+            if not tekrarsizlariBulTum(jobListe[i],item):
+                listeYalnizOrder.append(item)
+        if len(listeYalnizOrder) > 0:
+            sozlukTekrar.update({jobListe[i]:listeYalnizOrder})
+
+
+    for i in list(jobListe):
+        for item in siralama[i]:
+            for key,value in sozlukTekrar.items():
+                if key == i:
+                    for val in value:
+                        if item == val:
+                            if i == "J3":
+                                x = 1
+                            siralama[i].remove(item)
+                            siralama[i].insert(0, item)
+    
+    print(siralama)
+           
             
             
     
@@ -178,6 +214,8 @@ def OkuBakalım(is_adi,Folderadres,txt_adres,csv_adres,Job,Order,TopSure,DosyaSu
 
 
     for item in jobListe:
+        if is_adi == "Experiment4" and item =="J4":
+            print("x")
         toplam += df2.loc["SETUP",item]
         for i in siralama[item]:
             toplam += df2.loc[i,item]
@@ -202,13 +240,13 @@ def OkuBakalım(is_adi,Folderadres,txt_adres,csv_adres,Job,Order,TopSure,DosyaSu
     print("Toplamda Geçen Süre :",gecenSure(TopSure),"sn","\n"*2,file = open(adres,"a"))    
     print("Toplam",sayi,"Geçen Süre :",gecenSure(start),"sn")
 
-    
+
         
 table_list = []
 
 def dosyaisimleri(sira):
     liste = []
-    for i in range((sira*25)+1,(sira*25)+25):
+    for i in range((sira*25)+1,(sira*25)+26):
         liste.append("Experiment"+str(i)+".csv")
     return liste
 
@@ -217,77 +255,16 @@ def dosyaisimleri(sira):
 ToplamSure = time.perf_counter()
 DosyaSure = time.perf_counter()
 sira = 0
+import  os
 for ord in range(5,25,5):
     for job in range(5,25,5):
         new_table_list = dosyaisimleri(sira)
+        DosyaOlustur(os.getcwd()+r"\DENEME CSV SETLER\DENEME CSV SETLER\I={}, J={}".format(ord, job)+"\\"+r"\I{}_J{}.txt".format(ord, job))
         for item in new_table_list:
             DosyaSure = time.perf_counter()
-            OkuBakalım(item.split(".")[0],r"E:\Projelerim\single_machine_scheduling\DENEME CSV SETLER\DENEME CSV SETLER\I={}, J={}".format(ord,job),r"\I{}_J{}.txt".format(ord,job),item,Job=job,Order=ord,TopSure=ToplamSure,DosyaSure=DosyaSure)
+            
+            OkuBakalım(item.split(".")[0],os.getcwd()+ r"\DENEME CSV SETLER\DENEME CSV SETLER\I={}, J={}".format(ord,job),r"\I{}_J{}.txt".format(ord,job),item,Job=job,Order=ord,TopSure=ToplamSure,DosyaSure=DosyaSure,wSetup=1)
         sira += 1        
-# OkuBakalım("Exp_35",r"E:\Projelerim\single_machine_scheduling\DENEME CSV SETLER\DENEME CSV SETLER\I=5, J=5",r"\deneme.txt",r"Experiment4.csv",Job=5,Order=5,TopSure=ToplamSure,DosyaSure=DosyaSure)
-
-# toplam = 0
-# orderToplamListesi = {}
-# for order in range(1,6):
-#     orderToplamListesi.update({"O"+str(order):0})
-
-# def ilerideVarmi(order,Job):
-#     global jobListe
-#     global siralama
-#     liste = list(jobListe)
-#     if liste.index(Job)+1  == len(liste):
-#         return False
-#     else:
-#         sayi = liste.index(Job)
-#         sinama  = False
-#         for i in range(sayi,len(liste)):
-#             for item in siralama[liste[i]] :
-#                 if order in item:
-#                     sinama = True
-#         return sinama
-
-
-
-# # print(list(jobListe))
-# for item in jobListe:
-#     toplam += df2.loc["SETUP",item]
-#     for i in siralama[item]:
-#         print(item,i,ilerideVarmi(i,item))
-#         toplam += df2.loc[i,item]
-#         if ilerideVarmi(i,item):            
-#             orderToplamListesi[i] = toplam
-#     print("Toplam",toplam)
-# print(orderToplamListesi)
-# sayi = 0
-# for i in orderToplamListesi.values():
-#     sayi += i
-
-# print("Toplam",sayi)
-
-
-                    
-
-
-
-
-
-
-        # if list(set(siralama[jobListe[i-1]]) & set(siralama[jobListe[i-2]]))[0] > 0:
-        #     print(siralama[jobListe[i-1]])
-    
-
-
-# print(df1.iloc[:,0])
-# dfDeneme = pd.DataFrame(df1.iloc[:,0])
-# dfDeneme.columns = ["J8"]
-# # print(dfDeneme.sort_values(by=0))
-# data = { "J8":dfDeneme.sort_values(by="J8") 
-# }
-# # dfDeneme = pd.DataFrame(df1.iloc[:,1])
-# # data.update({"J5":dfDeneme.sort_values(by=1)})
-
-# p = pd.Panel(data)
-# print(p["J8"])
 
 
 
