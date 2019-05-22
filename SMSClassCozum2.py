@@ -30,18 +30,30 @@ class SMSCozum():
         self.OrderList = []
         self.kayit = kayit
 
-    def dosyaHazirla(self):
-        self.sutun = ["Job"]
+    def sutunHazirla(self):
+        OrderList=[]
+        sutun = ["Job"]
         for i in range(1, self.Order + 1):
-            self.sutun.append("O" + str(i))
-            self.OrderList.append("O" + str(i))
-        self.sutun += ["PROC", "SETUP"]
+            sutun.append("O" + str(i))
+            OrderList.append("O" + str(i))
+        sutun += ["PROC", "SETUP"]
+        return sutun,OrderList
+
+
+    def sutunGuncelle(self,basliklar=[],Veri=""):
+        return basliklar.append(Veri)
+
+
+    def csvOkuDf(self,FolderAdres,csv_adres,delimiter):
+        return pd.read_csv(FolderAdres+os.sep+csv_adres, delimiter=delimiter)
+
+    def dosyaHazirla(self):
+        self.sutun,self.OrderList = self.sutunHazirla()
         self.adres = self.Folderadres + "\\" + self.txt_adres
-        self.data = pd.read_csv(self.Folderadres + "\\" + self.csv_adres, delimiter=";")
+        self.data = self.csvOkuDf(self.Folderadres,self.csv_adres, ";")
 
         self.KayitTut("İlk Okuma", self.data)
-
-        self.sutun.append("SUM")
+        self.sutunGuncelle(self.sutun,"SUM")
         self.df = pd.DataFrame(columns=self.sutun)
         self.df.Job = self.data.Job
         if self.wSetup == 0:
@@ -68,21 +80,29 @@ class SMSCozum():
             self.Ozet()
 
 
-    def ToplamZamanHesapla(self):
-        pass
+
 
 
 
     def Transpoze(self, Kaynak, Order):
-        self.df1 = Kaynak.iloc[:, 1:Order + 1].T
-        self.df1.columns = Kaynak.iloc[:, 0]
-        self.KayitTut("df1 Eklendi", self.df1)
-
-        self.df2 = Kaynak.iloc[:, 1:Order + 3].T
-        self.df2.columns = Kaynak.iloc[:, 0]
-        self.KayitTut("df2 Eklendi", self.df2)
+        self.df1 = self.df1Transpoze(Kaynak,Order)
+        self.df2 = self.df2Transpoze(Kaynak,Order)
 
 
+
+
+    def df1Transpoze(self,Kaynak,Order):
+        df1 = Kaynak.iloc[:, 1:Order + 1].T
+        df1.columns = Kaynak.iloc[:, 0]
+        self.KayitTut("df1 Eklendi", df1)
+        return df1
+
+
+    def df2Transpoze(self,Kaynak,Order):
+        df2 = Kaynak.iloc[:, 1:Order + 3].T
+        df2.columns = Kaynak.iloc[:, 0]
+        self.KayitTut("df2 Eklendi", df2)
+        return df2
 
     def SiralamaHazirla(self, df, TemDf):
         siralamaSoz = {}
@@ -102,6 +122,8 @@ class SMSCozum():
         self.KayitTut("JobListe Eklendi", jobListe)
         self.KayitTut("Sıralama Eklendi", siralamaSoz)
         return siralamaSoz, jobListe
+
+
 
     def tekrarsizlariBul(self, job, order):
         tekrar = False
@@ -145,9 +167,29 @@ class SMSCozum():
                                 self.siralama[i].remove(item)
                                 self.siralama[i].insert(0, item)
 
+    def orderToplamListesiOlustur(self,Order):
+        orderToplamListesi = {}
+        for order in range(1, Order + 1):
+            orderToplamListesi.update({"O" + str(order): 0})
+        return orderToplamListesi
+
+    def toplamaIslemiBagimsiz(self,jobliste,orderSozluk,df,Order):
+        ordertoplamalistesi = self.orderToplamListesiOlustur(Order)
+        toplam = 0
+        sayi = 0
+        for item in jobliste:
+            toplam += df.loc["SETUP", item]
+            for i in orderSozluk[item]:
+                toplam += df.loc[i, item]
+                ordertoplamalistesi[i] = toplam
+        for i in ordertoplamalistesi.values():
+            sayi += i
+        return sayi
+
+
     def toplamaIslemi(self):
-        for order in range(1, self.Order + 1):
-            self.orderToplamListesi.update({"O" + str(order): 0})
+        # self.tekrarDuzenlemesiTekil()
+        self.orderToplamListesi = self.orderToplamListesiOlustur(self.Order)
         for item in self.jobListe:
             self.toplam += self.df2.loc["SETUP", item]
             for i in self.siralama[item]:
@@ -156,14 +198,14 @@ class SMSCozum():
         self.KayitTut("orderToplamListesi Eklendi", self.orderToplamListesi)
 
     def Ozet(self):
-        sayi = 0
+        self.sayi = 0
         for i in self.orderToplamListesi.values():
-            sayi += i
+            self.sayi += i
         print("Toplam Eklendi\n", self.is_adi, file=open(self.adres, "a"))
-        print("Toplam", sayi, "Geçen Süre :", self.gecenSure(self.start), "sn", "\n" * 2, file=open(self.adres, "a"))
+        print("Toplam", self.sayi, "Geçen Süre :", self.gecenSure(self.start), "sn", "\n" * 2, file=open(self.adres, "a"))
         print("Dosyada Geçen Süre :", self.gecenSure(self.DosyaSure), "sn", "\n" * 2, file=open(self.adres, "a"))
         print("Toplamda Geçen Süre :", self.gecenSure(self.TopSure), "sn", "\n" * 2, file=open(self.adres, "a"))
-        print("Toplam", sayi, "Geçen Süre :", self.gecenSure(self.start), "sn")
+        print("Toplam", self.sayi, "Geçen Süre :", self.gecenSure(self.start), "sn")
 
     def toplama(self, Order, Value):
         self.orderToplamListesi[Order] = Value
@@ -187,6 +229,19 @@ class SMSCozum():
 
     def SozluksiralamaGonder(self):
         return self.siralama
+
+    def defaultSiralamaGonder(self):
+        defaultSira = {}
+        liste = []
+        for item in range(1,self.Job+1):
+            liste.append("J"+str(item))
+        for eleman in liste:
+            orderListe = []
+            for i in range(1,self.Order+1):
+                orderListe.append("O"+str(i))
+            defaultSira.update({eleman:orderListe})
+        return liste,defaultSira
+
 
     @classmethod
     def DosyaOlustur(cls):
