@@ -1,0 +1,165 @@
+Toplam Eklendi
+ Experiment1
+Toplam 2273 Geçen Süre : 0.5373652999999999 sn 
+
+
+Dosyada Geçen Süre : 0.5431367 sn 
+
+
+Toplamda Geçen Süre : 0.5476339 sn 
+
+
+Toplam Eklendi
+ Experiment1
+Toplam 2273 Geçen Süre : 0.21059119999999998 sn 
+
+
+Dosyada Geçen Süre : 0.21530629999999998 sn 
+
+
+Toplamda Geçen Süre : 0.2198471 sn 
+
+
+Toplam Eklendi
+ Experiment1
+Toplam 663 Geçen Süre : 0.1895513 sn 
+
+
+Dosyada Geçen Süre : 0.1952566 sn 
+
+
+Toplamda Geçen Süre : 0.203298 sn 
+
+
+Toplam Eklendi
+ Experiment1
+Toplam 663 Geçen Süre : 0.17565909999999998 sn 
+
+
+Dosyada Geçen Süre : 0.1796687 sn 
+
+
+Toplamda Geçen Süre : 0.18377 sn 
+
+
+Toplam Eklendi
+ Experiment1
+Toplam 663 Geçen Süre : 0.2121827 sn 
+
+
+Dosyada Geçen Süre : 0.21789260000000002 sn 
+
+
+Toplamda Geçen Süre : 0.22953010000000001 sn 
+
+
+Toplam Eklendi
+ Experiment1
+Toplam 663 Geçen Süre : 0.4683376 sn 
+
+
+Dosyada Geçen Süre : 0.4723072 sn 
+
+
+Toplamda Geçen Süre : 0.47670310000000005 sn 
+
+
+Toplam Eklendi
+ Experiment1
+Toplam 663 Geçen Süre : 0.39700870000000005 sn 
+
+
+Dosyada Geçen Süre : 0.4012571 sn 
+
+
+Toplamda Geçen Süre : 0.4053906 sn 
+
+
+Toplam Eklendi
+ Experiment1
+Toplam 663 Geçen Süre : 0.20690229999999998 sn 
+
+
+Dosyada Geçen Süre : 0.2121312 sn 
+
+
+Toplamda Geçen Süre : 0.216153 sn 
+
+
+Toplam Eklendi
+ Experiment1
+Toplam 663 Geçen Süre : 0.39555239999999997 sn 
+
+
+Dosyada Geçen Süre : 0.3998714 sn 
+
+
+Toplamda Geçen Süre : 0.4039302 sn 
+
+
+Toplam Eklendi
+ Experiment1
+Toplam 663 Geçen Süre : 0.4235638 sn 
+
+
+Dosyada Geçen Süre : 0.42776569999999997 sn 
+
+
+Toplamda Geçen Süre : 0.4319565 sn 
+
+
+Toplam Eklendi
+ Experiment1
+Toplam 663 Geçen Süre : 0.3972876 sn 
+
+
+Dosyada Geçen Süre : 0.4017901 sn 
+
+
+Toplamda Geçen Süre : 0.4063506 sn 
+
+
+Toplam Eklendi
+ Experiment1
+Toplam 663 Geçen Süre : 0.2041869 sn 
+
+
+Dosyada Geçen Süre : 0.20816400000000002 sn 
+
+
+Toplamda Geçen Süre : 0.2124537 sn 
+
+
+Toplam Eklendi
+ Experiment1
+Toplam 663 Geçen Süre : 0.1650905 sn 
+
+
+Dosyada Geçen Süre : 0.1693162 sn 
+
+
+Toplamda Geçen Süre : 0.173427 sn 
+
+
+Toplam Eklendi
+ Experiment1
+Toplam 663 Geçen Süre : 0.1723348 sn 
+
+
+Dosyada Geçen Süre : 0.1763212 sn 
+
+
+Toplamda Geçen Süre : 0.6715156999999999 sn 
+
+
+Toplam Eklendi
+ Experiment1
+Toplam 663 Geçen Süre : 0.1816035 sn 
+
+
+Dosyada Geçen Süre : 0.2143548 sn 
+
+
+Toplamda Geçen Süre : 0.2200346 sn 
+
+

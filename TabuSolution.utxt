@@ -1,0 +1,15 @@
+@startuml
+class TabuAlg1():
+    def __init__(self):
+        pass
+
+    def RandomizeJobList(self,orderListe):
+        import random as rnd
+        rndliste = orderListe.copy()
+        for item in rndliste:
+            sayi = rndliste.index(item)
+            yeniyer = rnd.randint(0,len(rndliste))
+            rndliste.remove(item)
+            rndliste.insert(yeniyer,item)
+        return rndliste
+@enduml

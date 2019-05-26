@@ -215,8 +215,8 @@ class SMSCozum():
             print(mesaj + "\n", self.is_adi, file=open(self.adres, "a"))
             print(veri, "\n" * 2, file=open(self.adres, "a"))
 
-        print(mesaj + "\n", self.is_adi)
-        print(veri, "\n" * 2)
+            print(mesaj + "\n", self.is_adi)
+            print(veri, "\n" * 2)
 
     def gecenSure(self, start):
         return time.perf_counter() - start
