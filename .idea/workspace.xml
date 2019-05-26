@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f80a7f7-ba8b-42e5-9ecd-09e763702d75" name="Default Changelist" comment="&quot;&quot;">
+      <change afterPath="$PROJECT_DIR$/temp.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PINAR.db" beforeDir="false" afterPath="$PROJECT_DIR$/PINAR.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SMSClassCozum2.py" beforeDir="false" afterPath="$PROJECT_DIR$/SMSClassCozum2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TabuSolution.py" beforeDir="false" afterPath="$PROJECT_DIR$/TabuSolution.py" afterDir="false" />
