@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f80a7f7-ba8b-42e5-9ecd-09e763702d75" name="Default Changelist" comment="&quot;&quot;">
-      <change afterPath="$PROJECT_DIR$/temp.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PINAR.db" beforeDir="false" afterPath="$PROJECT_DIR$/PINAR.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SMSClassCozum2.py" beforeDir="false" afterPath="$PROJECT_DIR$/SMSClassCozum2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TabuSolution.py" beforeDir="false" afterPath="$PROJECT_DIR$/TabuSolution.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TabuTry.py" beforeDir="false" afterPath="$PROJECT_DIR$/TabuTry.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +16,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TabuTry.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2812">
-              <caret line="52" column="45" lean-forward="true" selection-start-line="52" selection-start-column="45" selection-end-line="52" selection-end-column="45" />
+            <state relative-caret-position="2808">
+              <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -31,8 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SMSClassCozum2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+            <state relative-caret-position="335">
+              <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -43,8 +40,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TabuSolution.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2381">
-              <caret line="275" column="72" selection-start-line="275" selection-start-column="72" selection-end-line="275" selection-end-column="72" />
+            <state relative-caret-position="341">
+              <caret line="315" column="17" lean-forward="true" selection-start-line="315" selection-start-column="17" selection-end-line="315" selection-end-column="17" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -77,6 +74,8 @@
       <find>jobliste</find>
       <find>siralama</find>
       <find>while</find>
+      <find>reset</find>
+      <find>iloc</find>
     </findStrings>
     <replaceStrings>
       <replace>self.adres</replace>
@@ -99,15 +98,15 @@
         <option value="$PROJECT_DIR$/PandasCozum.py" />
         <option value="$USER_HOME$/Desktop/SINAVLAR/5_sinif-Bilişim Teknolojileri ve Yazılım2_donem-2.sinav/word/document.xml" />
         <option value="$PROJECT_DIR$/TabuSolution.utxt" />
-        <option value="$PROJECT_DIR$/SMSClassCozum2.py" />
         <option value="$PROJECT_DIR$/TabuTry.py" />
+        <option value="$PROJECT_DIR$/SMSClassCozum2.py" />
         <option value="$PROJECT_DIR$/TabuSolution.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2258" />
-    <option name="y" value="118" />
+    <option name="x" value="-186" />
+    <option name="y" value="219" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -117,6 +116,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -141,7 +141,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -305,29 +304,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-2" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19402985" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19616205" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" x="1920" y="29" width="1920" height="1017" id="Run" order="2" sideWeight="0.4989339" type="WINDOWED" visible="true" weight="0.8418202" />
+      <window_info anchor="bottom" x="264" y="437" width="1031" height="131" id="Run" maximized="true" order="2" sideWeight="0.4989339" type="WINDOWED" weight="0.8418202" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.3336945" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946696" weight="0.32936078" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946696" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4989339" weight="0.32936078" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49946696" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50053304" side_tool="true" weight="0.3997833" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32936078" />
       <window_info anchor="bottom" id="Messages" order="11" />
-      <window_info anchor="right" id="PlantUML" weight="0.32995737" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="R Graphics" order="3" />
       <window_info anchor="right" id="R Packages" order="4" />
+      <window_info anchor="right" id="PlantUML" order="5" weight="0.32995737" />
     </layout>
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -405,11 +404,6 @@
           <line>161</line>
           <option name="timeStamp" value="46" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/TabuSolution.py</url>
-          <line>281</line>
-          <option name="timeStamp" value="93" />
-        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -426,11 +420,17 @@
         <watch expression="item[1]" language="Python" />
         <watch expression="deneme.jobListe" language="Python" />
         <watch expression="deneme.initialOrder" language="Python" />
+        <watch expression="var1" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>var1</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>deneme.initialOrder</expression-string>
         <language-id>Python</language-id>
@@ -610,37 +610,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SMSClassCozum2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/ProgramData/Anaconda3/envs/masaustu/Lib/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="312" column="41" lean-forward="true" selection-start-line="312" selection-start-column="41" selection-end-line="312" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TabuTry.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2812">
-          <caret line="52" column="45" lean-forward="true" selection-start-line="52" selection-start-column="45" selection-end-line="52" selection-end-column="45" />
+        <state relative-caret-position="2808">
+          <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://E:/ProgramData/Anaconda3/envs/masaustu/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5292">
+          <caret line="308" selection-start-line="308" selection-end-line="308" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SMSClassCozum2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/TabuSolution.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2381">
-          <caret line="275" column="72" selection-start-line="275" selection-start-column="72" selection-end-line="275" selection-end-column="72" />
+        <state relative-caret-position="341">
+          <caret line="315" column="17" lean-forward="true" selection-start-line="315" selection-start-column="17" selection-end-line="315" selection-end-column="17" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>

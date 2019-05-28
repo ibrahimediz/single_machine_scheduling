@@ -10,6 +10,7 @@ class TabuSearch():
         self.initialOrder = None
         self.initialSolution()
 
+
     # 14465
     # 15203
     # 1. Tabu Süresi Belirle
@@ -176,8 +177,9 @@ class TabuRun():
         self.TabAlg2 = []
         self.TabAlg3 = []
         self.df = None
-        self.df2 = None
+        self.df2 = pd.DataFrame({"a": [123]})
         self.df3 = None
+        self.dfResult = pd.DataFrame({"a": [123]})
         self.RunAlg1()
 
 
@@ -190,9 +192,14 @@ class TabuRun():
     def RunAlg2(self):
         listeler = list(self.df["JobList"])
         for item in listeler:
-            for i in range(0,15):
+            i = 0
+            while len(self.df2.index) < 30:
                     self.TabAlg2.append(TabuAlg2(item,self.initialOrder,i).resultSetAlg2)
                     self.EliminateResultsAlg2()
+            i+=1
+            # self.df2 = self.df2.sort_values(by=["CT"]).reset_index(drop=True)
+            # for i in range(0,len(self.df2.index)):
+            #     self.TabuLongList(self.df2.iloc[i]["JobList"],self.df2.iloc[i]["OrderList"],self.df2.iloc[i]["CT"])
 
     def RunAlg3(self):
         OrderList = list(self.df2["OrderList"])
@@ -214,7 +221,7 @@ class TabuRun():
             for i in self.TabAlg3:
                 devam = True
                 for key,values in i[1].items():
-                    if Order[key] == values:
+                    if Order[key] == values and len(Order[key])>1:
                         genelOrder.remove(Order)
                         devam = False
                         break
@@ -223,7 +230,6 @@ class TabuRun():
                     genelListe.append(JobList)
                     CalcT.append(CT)
                     ProcindxS.append(Procindx)
-
             self.df3 = pd.DataFrame({"JobList": genelListe,"OrderList":genelOrder ,"CT": CalcT})
         self.df3 =self.df3.drop_duplicates("CT")
         self.df3 = self.df3.sort_values(by=["CT"])
@@ -254,9 +260,32 @@ class TabuRun():
                     CalcT.append(CT)
                     ProcindxS.append(Procindx)
             self.df2 = pd.DataFrame({"JobList": genelListe,"OrderList":genelOrder ,"CT": CalcT})
-        self.df2 =self.df2.drop_duplicates("CT")
-        self.df2 = self.df2.sort_values(by=["CT"])
-        print(self.df2)
+            self.df2 = self.df2.drop_duplicates("CT")
+            self.df2 = self.df2.sort_values(by=["CT"])
+            print(self.df2)
+
+    # def TabuLongList(self,JobList,Order,CT):
+    #     genelListe = []
+    #     genelOrder = []
+    #     CalcT = []
+    #     self.dfTemp = None
+    #     if not len(self.dfResult.index) > 5:
+    #         genelOrder.append(Order)
+    #         genelListe.append(JobList)
+    #         CalcT.append(CT)
+    #         self.dfTemp = {"JobList": JobList,"OrderList":Order ,"CT": CT}
+    #         self.dfResult = self.dfResult.append(self.dfTemp)
+    #     else:
+    #         self.dfResult = self.dfResult.sort_values(by=["CT"]).reset_index(drop=True)
+    #         self.dfResult.drop(5)
+    #         self.dfTemp = {"JobList": JobList, "OrderList": Order, "CT": CT}
+    #         self.dfResult = self.dfResult.append(self.dfTemp)
+    #         self.dfResult = self.dfResult.sort_index()
+
+
+
+
+
 
 
     def EliminateResultsAlg1(self):
@@ -276,12 +305,15 @@ class TabuRun():
         self.df = self.df.head(len(genelListe[0])*(len(genelListe[0])-1))
 
 
+
+
 Run1 = TabuRun()
 print(Run1.df)
 Run1.RunAlg2()
 print(Run1.df2)
-Run1.RunAlg3()
-print(Run1.df3)
+
+# Run1.RunAlg3()
+# print(Run1.df3)
 
 
 
