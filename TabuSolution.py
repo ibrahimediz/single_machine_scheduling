@@ -25,6 +25,7 @@ class TabuSearch():
         import time
         # new_table_list = dosyaisimleri(sira)
         new_table_list = ["Experiment6.csv"]
+        self.RepFileName = "Experiment6.csv"
         self.job = 5
         self.ord = 5
         SMSCozum.kayit_adres = os.getcwd() + r"\DENEME CSV SETLER\DENEME CSV SETLER\I={}, J={}".format(self.ord, self.job) + "\\" + r"\I{}_J{}.txt".format(
@@ -170,6 +171,7 @@ class TabuAlg3():
 class TabuRun():
     def __init__(self):
         FirstRun = TabuSearch()
+        self.FileName = FirstRun.RepFileName
         self.initialJobList = list(FirstRun.jobListe)
         self.initialOrder = FirstRun.initialOrder
         self.TabuLongTerm = []
@@ -310,7 +312,7 @@ class TabuRun():
 Run1 = TabuRun()
 print(Run1.df)
 Run1.RunAlg2()
-print(Run1.df2)
+Run1.df2.to_csv(Run1.FileName+".csv",sep=';', encoding='utf-8')
 
 # Run1.RunAlg3()
 # print(Run1.df3)
