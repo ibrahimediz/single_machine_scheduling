@@ -1,7 +1,6 @@
 from SMSClassCozum2 import SMSCozum
 import os
 import pandas as pd
-import sqlite3 as sql
 
 class TabuSearch():
     def __init__(self):

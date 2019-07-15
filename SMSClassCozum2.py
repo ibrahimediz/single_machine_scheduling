@@ -124,6 +124,26 @@ class SMSCozum():
         return siralamaSoz, jobListe
 
 
+    def SiralamaHazirla(self, df, TemDf):
+        siralamaSoz = {}
+        jobListe = TemDf.iloc[:, 0]
+        for i in range(int(df.shape[1])):
+            dfDeneme = pd.DataFrame(df.iloc[:, i])
+            dfDeneme = dfDeneme.sort_values(by=list(dfDeneme)[0])
+            liste = dfDeneme.index.tolist()
+            liste2 = []
+            for i in dfDeneme[list(dfDeneme)[0]]:
+                liste1 = list(dfDeneme[list(dfDeneme)[0]])
+                liste2 = list(dfDeneme[list(dfDeneme)[0]].index)
+                for item in liste1:
+                    if item == 0:
+                        liste2.pop(liste1.index(item))
+            siralamaSoz[list(dfDeneme)[0]] = liste2
+        self.KayitTut("JobListe Eklendi", jobListe)
+        self.KayitTut("Sıralama Eklendi", siralamaSoz)
+        return siralamaSoz, jobListe
+
+
 
     def tekrarsizlariBul(self, job, order):
         tekrar = False
@@ -141,7 +161,47 @@ class SMSCozum():
                     return True
         return tekrar
 
+    def tekrarsizlariBulWJobList(self, job, order,joblist):
+        tekrar = False
+        for i in range(0, len(joblist)):
+            if job != joblist[i] and list(joblist).index(job) < list(joblist).index(joblist[i]):
+                if order in self.siralama[joblist[i]]:
+                        tekrar = True
+        return tekrar
 
+    def tekrarsizlariBulTumWJobList(self, job, order,joblist):
+        tekrar = False
+        for i in range(0, len(joblist)):
+            if job != joblist[i]:
+                if order in self.siralama[joblist[i]]:
+                    return True
+        return tekrar
+
+    
+    
+    def tekrarDuzenlemesiTekilRet(self,joblist):
+        sozlukTekrar = {}
+        for i in range(0, len(joblist)):
+            listeYalnizOrder = []
+            for item in self.siralama[joblist[i]]:
+                if not self.tekrarsizlariBulWJobList(joblist[i], item,joblist) and list(joblist).index(joblist[i]) != len(joblist) - 1:
+                    self.siralama[joblist[i]].remove(item)
+                    self.siralama[joblist[i]].insert(0, item)
+                if not self.tekrarsizlariBulTumWJobList(joblist[i], item,joblist):
+                    listeYalnizOrder.append(item)
+            if len(listeYalnizOrder) > 0:
+                sozlukTekrar.update({joblist[i]: listeYalnizOrder})
+        # for i in list(joblist):
+        #     for item in self.siralama[i]:
+        #         for key, value in sozlukTekrar.items():
+        #             if key == i:
+        #                 for val in value:
+        #                     if item == val:
+        #                         if i == "J3":
+        #                             x = 1
+        #                         self.siralama[i].remove(item)
+        #                         self.siralama[i].insert(0, item)
+        return self.siralama
 
     def tekrarDuzenlemesiTekil(self):
         sozlukTekrar = {}
@@ -155,7 +215,6 @@ class SMSCozum():
                     listeYalnizOrder.append(item)
             if len(listeYalnizOrder) > 0:
                 sozlukTekrar.update({self.jobListe[i]: listeYalnizOrder})
-
         for i in list(self.jobListe):
             for item in self.siralama[i]:
                 for key, value in sozlukTekrar.items():
@@ -166,6 +225,8 @@ class SMSCozum():
                                     x = 1
                                 self.siralama[i].remove(item)
                                 self.siralama[i].insert(0, item)
+
+        
 
     def orderToplamListesiOlustur(self,Order):
         orderToplamListesi = {}
